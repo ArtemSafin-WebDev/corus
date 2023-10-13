@@ -1,0 +1,346 @@
+.page-footer {
+  @include blockWrapper;
+  border-radius: 5rem 5rem 0px 0px;
+  background: white;
+
+  @include breakpoint(tablet) {
+    border-radius: 3rem 3rem 0px 0px;
+  }
+}
+
+.page-footer__content {
+  @include blockContent;
+
+  @include breakpoint(mobile) {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.page-footer__top-row {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding: 5.2rem 0;
+  border-bottom: 1px solid #e3e8ef;
+
+  @include breakpoint(tablet) {
+    padding: 3.2rem 0;
+  }
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.page-footer__logo {
+  flex-shrink: 0;
+
+  @include breakpoint(mobile) {
+    align-self: center;
+    margin-bottom: 4rem;
+  }
+}
+
+.page-footer__logo-image {
+  display: block;
+  height: auto;
+  width: 13.3rem;
+}
+
+.page-footer__nav {
+  flex-shrink: 0;
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.page-footer__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  row-gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.page-footer__nav-list-item {
+  flex-shrink: 0;
+}
+
+.page-footer__nav-link {
+  display: block;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.4rem;
+  letter-spacing: -0.028rem;
+  transition: color 0.2s;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.page-footer__telegram-link {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.4rem;
+  letter-spacing: -0.028rem;
+  color: var(--primary-color);
+  margin-left: auto;
+
+  svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: var(--primary-color);
+  }
+
+  &:link,
+  &:visited {
+    color: var(--primary-color);
+  }
+
+  @include breakpoint(mobile) {
+    order: 15;
+    align-self: center;
+    margin: 0;
+  }
+}
+
+.page-footer__middle-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid #e3e8ef;
+
+  @include breakpoint(tablet) {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.page-footer__offices {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(mobile) {
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #e3e8ef;
+    padding-bottom: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.page-footer__offices-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @include breakpoint(tablet) {
+    gap: 3.8rem;
+  }
+}
+
+.page-footer__offices-card {
+  gap: 0.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-footer__offices-card-title {
+  color: #8293a6;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+
+.page-footer__offices-card-text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.4rem;
+  letter-spacing: -0.032rem;
+  text-transform: uppercase;
+
+  @include breakpoint(tablet) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2rem;
+    letter-spacing: -0.028rem;
+    text-transform: uppercase;
+  }
+}
+
+.page-footer__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.page-footer__phone-link {
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -0.192rem;
+  font-family: var(--drugs);
+  margin-top: 1rem;
+  transition: color 0.2s;
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.096rem;
+  }
+
+  @include breakpoint(mobile) {
+    align-self: center;
+  }
+}
+
+.page-footer__email-link {
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -0.192rem;
+  font-family: var(--drugs);
+  margin-top: 1rem;
+  transition: color 0.2s;
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.096rem;
+  }
+
+  @include breakpoint(mobile) {
+    align-self: center;
+  }
+}
+
+.page-footer__join {
+  margin-top: 2rem;
+  color: #8293a6;
+  text-align: right;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+
+  &:link,
+  &:visited {
+    color: #8293a6;
+  }
+
+  a {
+    color: var(--primary-color);
+    &:link,
+    &:visited {
+      color: var(--primary-color);
+    }
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+    a {
+      display: block;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2rem;
+    align-self: center;
+    text-align: center;
+  }
+}
+
+.page-footer__bottom-row {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  justify-content: space-between;
+  padding: 3rem 0;
+
+  @include breakpoint(mobile) {
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    order: 20;
+    border-top: 1px solid #e3e8ef;
+    margin-top: 4rem;
+  }
+}
+
+.page-footer__copyright {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+  letter-spacing: -0.028rem;
+
+  @include breakpoint(mobile) {
+    order: 10;
+  }
+}
+
+.page-footer__policy {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+  letter-spacing: -0.028rem;
+  text-decoration-line: underline;
+  transition: color 0.2s, text-decoration-color 0.2s;
+
+  @media (hover: hover) {
+    &:hover {
+      text-decoration-color: transparent;
+    }
+  }
+}

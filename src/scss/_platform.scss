@@ -1,0 +1,217 @@
+.platform {
+  @include blockWrapper;
+  margin-bottom: 13rem;
+
+  @include breakpoint(tablet) {
+    margin-bottom: 8rem;
+  }
+
+  @include breakpoint(mobile) {
+    margin-bottom: 6rem;
+  }
+}
+
+.platform__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.platform__heading {
+  font-size: 9.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 10.2rem;
+  letter-spacing: -0.368rem;
+  text-transform: uppercase;
+  font-family: var(--drugs);
+
+  b {
+    font-weight: inherit;
+    color: #8293a6;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 7.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 8rem;
+    letter-spacing: -0.288rem;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 5.2rem;
+    letter-spacing: -0.192rem;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4.2rem;
+    letter-spacing: -0.144rem;
+    text-transform: uppercase;
+  }
+}
+
+.platform__heading-text {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.2rem;
+  letter-spacing: -0.072rem;
+  margin-top: 2rem;
+
+  @include breakpoint(desktop) {
+    margin-top: 3rem;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
+    letter-spacing: -0.064rem;
+    margin-top: 1rem;
+  }
+}
+
+.platform__slider {
+  margin-top: 4rem;
+
+  @include breakpoint(tablet) {
+    margin-top: 2rem;
+  }
+
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: auto;
+    width: calc(25% - (2.4rem * 3 / 4));
+    margin-right: 2.4rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include breakpoint(desktop) {
+      width: calc(25% - (1.6rem * 3 / 4));
+      margin-right: 1.6rem;
+    }
+
+    @include breakpoint(tablet) {
+      width: 32.4rem;
+      margin-right: 1.2rem;
+    }
+  }
+}
+
+.platform__slider-card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 3rem;
+  border-radius: 5rem;
+  background: white;
+  color: var(--text-color);
+  gap: 1rem;
+  transition: color 0.2s, background-color 0.2s;
+
+  @media (hover: hover) {
+    &:hover {
+      background: #8293a6;
+      color: white;
+
+      .platform__slider-card-image {
+        filter: invert(100%) grayscale(100%) brightness(500%) contrast(500%);
+      }
+    }
+  }
+
+  @include breakpoint(desktop) {
+    padding: 3rem 2rem;
+    padding-bottom: 4rem;
+  }
+
+  @include breakpoint(tablet) {
+    border-radius: 3rem;
+  }
+}
+
+.platform__slider-card-image {
+  height: 5rem;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  object-position: left center;
+  transition: filter 0.2s;
+}
+
+.platform__slider-card-text {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.2rem;
+  letter-spacing: -0.072rem;
+  b {
+    font-weight: 600;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
+    letter-spacing: -0.056rem;
+  }
+}
+
+.platform__link {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.4rem;
+  letter-spacing: -0.072rem;
+  color: var(--primary-color);
+  transition: color 0.2s;
+  margin-top: 4rem;
+
+  &:link,
+  &:visited {
+    color: var(--primary-color);
+  }
+
+  svg {
+    flex-shrink: 0;
+    width: 4.2rem;
+    height: 4.2rem;
+    fill: currentColor;
+  }
+  @media (hover: hover) {
+    &:hover {
+      color: var(--text-color);
+    }
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.4rem;
+    letter-spacing: -0.064rem;
+    margin-top: 3rem;
+  }
+}

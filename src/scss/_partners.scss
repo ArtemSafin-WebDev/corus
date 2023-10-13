@@ -1,0 +1,146 @@
+.partners {
+  @include blockWrapper;
+  margin-bottom: 13.4rem;
+
+  @include breakpoint(tablet) {
+    margin-bottom: 8rem;
+  }
+
+  @include breakpoint(mobile) {
+    margin-bottom: 6rem;
+  }
+}
+
+.partners__content {
+  @include blockContent;
+}
+
+.partners__heading {
+  font-size: 9.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 10.2rem;
+  letter-spacing: -0.368rem;
+  text-transform: uppercase;
+  font-family: var(--drugs);
+  margin-bottom: 4rem;
+
+  b {
+    font-weight: inherit;
+    color: #8293a6;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 7.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 8rem;
+    letter-spacing: -0.288rem;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 5.2rem;
+    letter-spacing: -0.192rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4.2rem;
+    letter-spacing: -0.144rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+}
+
+.partners__sliders {
+  display: flex;
+  flex-direction: column;
+}
+
+.partners__slider {
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0 3.5rem;
+    width: 20rem;
+
+    @include breakpoint(desktop) {
+      width: 14.5rem;
+      margin: 0 3rem;
+    }
+
+    @include breakpoint(tablet) {
+      width: 15rem;
+      margin: 0 2.5rem;
+    }
+  }
+
+  &:nth-child(even) {
+    transform: translateX(calc(20rem / 2 + 3.5rem));
+  }
+
+  @include breakpoint(desktop) {
+    &:nth-child(even) {
+      transform: translateX(calc(14.5rem / 2 + 3rem));
+    }
+  }
+
+  @include breakpoint(tablet) {
+    &:nth-child(even) {
+      transform: translateX(calc(15rem / 2 + 2.5rem));
+    }
+  }
+}
+
+.partners__slider-card {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fff;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      .partners__slider-card-image-color {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.partners__slider-card-image-grey,
+.partners__slider-card-image-color {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.2s;
+}
+
+.partners__slider-card-image-color {
+  opacity: 0;
+}
