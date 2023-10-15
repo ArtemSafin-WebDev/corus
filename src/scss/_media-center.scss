@@ -37,6 +37,7 @@
   letter-spacing: -0.368rem;
   text-transform: uppercase;
   font-family: var(--drugs);
+  color: #8293a6;
 
   @include breakpoint(desktop) {
     font-size: 7.2rem;
