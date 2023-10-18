@@ -61,6 +61,7 @@
 
 .about__slider {
   margin-top: 4rem;
+  position: relative;
 
   @include breakpoint(tablet) {
     margin-top: 2rem;
@@ -75,6 +76,33 @@
     height: auto;
     display: flex;
     flex-direction: column;
+
+    @include breakpointMF(small-tablet) {
+      &:nth-child(1) {
+        position: relative;
+        z-index: 10;
+      }
+      &:nth-child(2) {
+        position: relative;
+        z-index: 9;
+      }
+      &:nth-child(3) {
+        position: relative;
+        z-index: 8;
+      }
+      &:nth-child(4) {
+        position: relative;
+        z-index: 7;
+      }
+      &:nth-child(5) {
+        position: relative;
+        z-index: 6;
+      }
+      &:nth-child(6) {
+        position: relative;
+        z-index: 5;
+      }
+    }
 
     @include breakpoint(tablet) {
       width: 35rem;
@@ -102,6 +130,57 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
       grid-gap: 2.4rem;
     }
+  }
+}
+
+.about__slider-text {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 60%;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.368rem;
+  text-transform: uppercase;
+  font-family: var(--drugs);
+  color: #8293a6;
+  // b {
+  //   font-weight: inherit;
+  //   color: #8293a6;
+  // }
+
+  // @include breakpoint(desktop) {
+  //   font-size: 7.2rem;
+  //   font-style: normal;
+  //   font-weight: 300;
+  //   line-height: 8rem;
+  //   letter-spacing: -0.288rem;
+  //   text-transform: uppercase;
+  // }
+
+  // @include breakpoint(tablet) {
+  //   font-size: 4.8rem;
+  //   font-style: normal;
+  //   font-weight: 300;
+  //   line-height: 5.2rem;
+  //   letter-spacing: -0.192rem;
+  //   text-transform: uppercase;
+  // }
+
+  // @include breakpoint(mobile) {
+  //   font-size: 3.6rem;
+  //   font-style: normal;
+  //   font-weight: 300;
+  //   line-height: 4.2rem;
+  //   letter-spacing: -0.144rem;
+  //   text-transform: uppercase;
+  // }
+
+  @include breakpoint(tablet) {
+    display: none;
   }
 }
 

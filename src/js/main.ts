@@ -14,6 +14,7 @@ import lazyloading from "./lazyloading";
 import smoothScrolling from "./smoothScrolling";
 import fixedHeader from "./fixedHeader";
 import menu from "./menu";
+import aboutAnimation from "./aboutAnimation";
 
 document.addEventListener("DOMContentLoaded", () => {
   smoothScrolling();
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   servicesTabsNav();
   lazyloading();
   menu();
+  aboutAnimation();
 });
 
 window.addEventListener("load", () => {
