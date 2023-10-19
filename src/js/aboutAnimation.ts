@@ -25,7 +25,7 @@ export default function aboutAnimation() {
       });
 
       slides.forEach((slide, slideIndex) => {
-        tl.to(
+        tl.from(
           slide,
           {
             duration: 1,
@@ -36,7 +36,7 @@ export default function aboutAnimation() {
         );
       });
 
-      tl.from(
+      tl.to(
         text,
         {
           autoAlpha: 0,
