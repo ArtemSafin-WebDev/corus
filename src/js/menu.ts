@@ -16,6 +16,11 @@ export default function menu() {
 
   listItems.forEach((item) => {
     const link = item.querySelector<HTMLLinkElement>(".page-header__nav-link");
+    const hasDropdown = !!item.querySelector<HTMLElement>(
+      ".page-header__nav-dropdown"
+    );
+
+    if (!hasDropdown) return;
 
     link?.addEventListener("click", (event) => {
       if (!window.matchMedia("(max-width: 1024px)").matches) return;
