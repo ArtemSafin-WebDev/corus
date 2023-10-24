@@ -15,23 +15,27 @@ import smoothScrolling from "./smoothScrolling";
 import fixedHeader from "./fixedHeader";
 import menu from "./menu";
 import aboutAnimation from "./aboutAnimation";
+import intro from "./intro";
 
 document.addEventListener("DOMContentLoaded", () => {
   smoothScrolling();
-  fixedHeader();
+
   tabs();
+  intro();
   innerTabs();
   mediaCenterSlider();
-  partnersSlider();
   experienceSlider();
   featuresSlider();
   platformSlider();
   aboutSlider();
   servicesInnerSlider();
   servicesTabsNav();
-  lazyloading();
   menu();
   aboutAnimation();
+  partnersSlider();
+
+  fixedHeader();
+  lazyloading();
 });
 
 window.addEventListener("load", () => {

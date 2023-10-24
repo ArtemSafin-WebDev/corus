@@ -10,7 +10,9 @@ export default function smoothScrolling() {
   let lenis: Lenis | null = null;
 
   if (!isTouch()) {
-    lenis = new Lenis();
+    lenis = new Lenis({
+      smoothWheel: true,
+    });
 
     lenis.on("scroll", ScrollTrigger.update);
 

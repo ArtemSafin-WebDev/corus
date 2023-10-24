@@ -25,6 +25,7 @@
   letter-spacing: -0.368rem;
   text-transform: uppercase;
   font-family: var(--drugs);
+  display: none;
 
   b {
     font-weight: inherit;
@@ -47,6 +48,7 @@
     line-height: 5.2rem;
     letter-spacing: -0.192rem;
     text-transform: uppercase;
+    display: block;
   }
 
   @include breakpoint(mobile) {
@@ -139,45 +141,41 @@
   right: 0;
   transform: translateY(-50%);
   width: 60%;
-  font-size: 5rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 1.2;
-  letter-spacing: -0.368rem;
-  text-transform: uppercase;
-  font-family: var(--drugs);
-  color: #8293a6;
+  // font-size: 5rem;
+  // font-style: normal;
+  // font-weight: 300;
+  // line-height: 1.2;
+  // letter-spacing: -0.368rem;
+  // text-transform: uppercase;
+  // font-family: var(--drugs);
+  // color: var(--text-color);
+
   // b {
   //   font-weight: inherit;
   //   color: #8293a6;
   // }
 
-  // @include breakpoint(desktop) {
-  //   font-size: 7.2rem;
-  //   font-style: normal;
-  //   font-weight: 300;
-  //   line-height: 8rem;
-  //   letter-spacing: -0.288rem;
-  //   text-transform: uppercase;
-  // }
+  font-size: 9.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 10.2rem;
+  letter-spacing: -0.368rem;
+  text-transform: uppercase;
+  font-family: var(--drugs);
 
-  // @include breakpoint(tablet) {
-  //   font-size: 4.8rem;
-  //   font-style: normal;
-  //   font-weight: 300;
-  //   line-height: 5.2rem;
-  //   letter-spacing: -0.192rem;
-  //   text-transform: uppercase;
-  // }
+  b {
+    font-weight: inherit;
+    color: #8293a6;
+  }
 
-  // @include breakpoint(mobile) {
-  //   font-size: 3.6rem;
-  //   font-style: normal;
-  //   font-weight: 300;
-  //   line-height: 4.2rem;
-  //   letter-spacing: -0.144rem;
-  //   text-transform: uppercase;
-  // }
+  @include breakpoint(desktop) {
+    font-size: 7.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 8rem;
+    letter-spacing: -0.288rem;
+    text-transform: uppercase;
+  }
 
   @include breakpoint(tablet) {
     display: none;

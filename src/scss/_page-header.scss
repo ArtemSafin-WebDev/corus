@@ -4,6 +4,7 @@
   top: 0;
   width: 100%;
   z-index: 100;
+  transition: transform 0.4s;
 
   @include blockWrapper;
 
@@ -20,6 +21,10 @@
       z-index: 75;
     }
   }
+}
+
+.header-hidden .page-header {
+  transform: translateY(-100%);
 }
 
 .page-header__content {
@@ -41,7 +46,7 @@
 
 .page-header__logo {
   flex-shrink: 0;
-  margin: 2.5rem 0;
+  margin: 3.1rem 0;
 
   @include breakpoint(tablet) {
     margin: 0;
@@ -162,12 +167,12 @@
 .page-header__nav-list {
   display: flex;
 
-  gap: 1.6rem;
+  gap: 2rem;
   flex-grow: 1;
 
-  @include breakpoint(desktop) {
-    gap: 2rem;
-  }
+  // @include breakpoint(desktop) {
+  //   gap: 2rem;
+  // }
 
   @include breakpoint(tablet) {
     flex-direction: column;
@@ -203,6 +208,7 @@
     fill: currentColor;
     transition: transform 0.2s;
     margin-top: 0.2rem;
+    margin-right: -1rem;
     &:last-child {
       display: none;
     }

@@ -16,10 +16,10 @@ export default function aboutAnimation() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: slider,
-          start: "bottom+=20 bottom",
-          end: () => `bottom+=${window.innerHeight * 2} bottom`,
+          start: "top top+=120",
+          end: () => `top+=${window.innerHeight * 2} top+=120`,
           scrub: true,
-          pin: element,
+          pin: ".pin-wrapper",
           pinSpacing: true,
         },
       });

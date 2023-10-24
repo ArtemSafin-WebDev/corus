@@ -9,7 +9,39 @@
   position: absolute;
   inset: 0;
   z-index: -1;
+  overflow: hidden;
+}
 
+.intro__bg-parallax-wrapper {
+  position: absolute;
+  inset: 0;
+
+  .swiper {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .swiper-wrapper {
+    height: 100%;
+  }
+
+  .swiper-slide {
+    height: 100%;
+    position: relative;
+  }
+}
+
+.intro__bg-card {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.intro__bg-image-masked {
+  position: absolute;
+  inset: 0;
   &::after {
     content: "";
     position: absolute;
@@ -22,23 +54,17 @@
   }
 }
 
-.intro__mask {
+.intro__bg-image-original {
   position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: auto;
-  opacity: 0.5;
+  inset: 0;
   z-index: 10;
-  margin-left: -13rem;
-  mix-blend-mode: soft-light;
-
-  &:nth-child(2) {
-    opacity: 1;
-  }
+  -webkit-mask-image: url("../images/intro-mask.svg");
+  -webkit-mask-position: left -13rem bottom;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: auto calc(100% - 9.9rem);
 
   @include breakpoint(desktop) {
-    margin-left: -9rem;
+    -webkit-mask-position: left -9rem bottom;
   }
 
   @include breakpoint(tablet) {
@@ -85,11 +111,20 @@
   grid-column: 6 / -1;
   align-self: center;
 
+  .swiper {
+    margin: 0;
+  }
+
   @include breakpoint(tablet) {
     align-self: stretch;
     grid-column: 1 / -1;
     margin: auto 0;
   }
+}
+
+.intro__text-content-card {
+  display: flex;
+  flex-direction: column;
 }
 
 .intro__heading {
