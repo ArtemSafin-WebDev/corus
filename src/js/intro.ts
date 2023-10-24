@@ -54,11 +54,9 @@ export default function intro() {
     let mm = gsap.matchMedia();
 
     mm.add("(min-width: 1025px)", () => {
-      const bg = element.querySelector<HTMLDivElement>(
-        ".intro__bg-parallax-wrapper"
-      );
+      element.querySelector<HTMLDivElement>(".intro__bg-parallax-wrapper");
 
-      const tl = gsap.timeline({
+      gsap.timeline({
         scrollTrigger: {
           trigger: element,
           start: "top top",
@@ -67,11 +65,6 @@ export default function intro() {
           pin: element,
         },
       });
-
-      // tl.to(bg, {
-      //   duration: 1,
-      //   y: () => element.offsetHeight * 0.3,
-      // });
     });
   });
 }
