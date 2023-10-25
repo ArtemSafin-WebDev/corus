@@ -16,10 +16,11 @@ import fixedHeader from "./fixedHeader";
 import menu from "./menu";
 import aboutAnimation from "./aboutAnimation";
 import intro from "./intro";
+import splitting from "./splitting";
 
 document.addEventListener("DOMContentLoaded", () => {
   smoothScrolling();
-
+  splitting();
   tabs();
   intro();
   innerTabs();

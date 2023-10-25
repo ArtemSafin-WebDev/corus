@@ -13,6 +13,7 @@
     "@types/lodash": "^4.14.199",
     "@types/node": "^20.7.0",
     "@types/postcss-preset-env": "^8.0.0",
+    "@types/splitting": "^1.0.4",
     "@types/validator": "^13.11.1",
     "fast-glob": "^3.3.1",
     "glob": "^10.3.3",
@@ -27,6 +28,7 @@
     "gsap": "^3.12.2",
     "inputmask": "^5.0.8",
     "lodash": "^4.17.21",
+    "splitting": "^1.0.6",
     "swiper": "^10.3.1",
     "validator": "^13.11.0"
   }

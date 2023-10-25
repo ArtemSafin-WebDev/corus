@@ -34,10 +34,52 @@ export default function intro() {
 
     if (!textSliderContainer) return;
 
+    const writeText = (swiper: Swiper) => {
+      const activeSlide = swiper.slides[swiper.activeIndex];
+      const heading = activeSlide.querySelector<HTMLElement>(".intro__heading");
+      if (!heading) return;
+      const headingChars = Array.from(
+        heading.querySelectorAll<HTMLElement>(".char")
+      );
+
+      const tl = gsap.timeline();
+      tl.fromTo(
+        headingChars,
+        {
+          autoAlpha: 0,
+        },
+        {
+          autoAlpha: 1,
+          duration: 0.14,
+          stagger: 0.08,
+        }
+      );
+
+      const headingText = activeSlide.querySelector<HTMLElement>(
+        ".intro__heading-text"
+      );
+      if (!headingText) return;
+
+      const headingTextChars = Array.from(
+        headingText.querySelectorAll<HTMLElement>(".char")
+      );
+      tl.fromTo(
+        headingTextChars,
+        {
+          autoAlpha: 0,
+        },
+        {
+          autoAlpha: 1,
+          duration: 0.02,
+          stagger: 0.02,
+        }
+      );
+    };
+
     const textSlider = new Swiper(textSliderContainer, {
       modules: [Autoplay, Controller, EffectFade],
       slidesPerView: 1,
-      speed: 1200,
+      speed: 500,
       effect: "fade",
       fadeEffect: {
         crossFade: true,
@@ -46,8 +88,18 @@ export default function intro() {
         delay: 4000,
         disableOnInteraction: true,
       },
-      autoHeight: true,
+      init: false,
+      on: {
+        init: (swiper) => {
+          writeText(swiper);
+        },
+        slideChange: (swiper) => {
+          writeText(swiper);
+        },
+      },
     });
+
+    textSlider.init();
 
     textSlider.controller.control = bgSlider;
 
