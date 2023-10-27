@@ -36,9 +36,7 @@ export default function intro() {
 
     const writeText = (swiper: Swiper) => {
       const activeSlide = swiper.slides[swiper.activeIndex];
-      const heading = activeSlide.querySelector<HTMLElement>(
-        ".intro__heading .anim-text"
-      );
+      const heading = activeSlide.querySelector<HTMLElement>(".intro__heading");
       if (!heading) return;
       const headingChars = Array.from(
         heading.querySelectorAll<HTMLElement>(".char")
@@ -95,9 +93,9 @@ export default function intro() {
         init: (swiper) => {
           writeText(swiper);
         },
-        slideChange: (swiper) => {
-          writeText(swiper);
-        },
+        // slideChange: (swiper) => {
+        //   writeText(swiper);
+        // },
       },
     });
 
