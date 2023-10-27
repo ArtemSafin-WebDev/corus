@@ -36,7 +36,9 @@ export default function intro() {
 
     const writeText = (swiper: Swiper) => {
       const activeSlide = swiper.slides[swiper.activeIndex];
-      const heading = activeSlide.querySelector<HTMLElement>(".intro__heading");
+      const heading = activeSlide.querySelector<HTMLElement>(
+        ".intro__heading .anim-text"
+      );
       if (!heading) return;
       const headingChars = Array.from(
         heading.querySelectorAll<HTMLElement>(".char")
