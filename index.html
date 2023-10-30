@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     {{> meta }}
   </head>
@@ -7,12 +8,21 @@
   <body>
     {{> header }}
     <main class="page-main">
-      {{> intro}} {{> services}}
-      <div class="pin-wrapper">{{> about}} {{> platform}} {{> features}}</div>
-      {{> experience}} {{> partners}} {{> media-center }}
+      {{> intro}}
+      {{> services}}
+      <div class="pin-wrapper">
+        {{> about}}
+        {{> platform}}
+        {{> features}}
+      </div>
+      {{> experience}}
+      {{> partners}}
+      {{> media-center }}
     </main>
     {{> footer }}
+    {{> modals }}
 
     <script type="module" src="/src/js/main.ts"></script>
   </body>
+
 </html>

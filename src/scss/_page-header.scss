@@ -388,12 +388,11 @@
 }
 
 .page-header__nav-dropdown-row {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-gap: 2.4rem;
+  column-count: 4;
+  column-gap: 2.4rem;
 
   @include breakpoint(desktop) {
-    grid-gap: 1.6rem;
+    column-gap: 1.6rem;
   }
 
   @include breakpoint(tablet) {
@@ -403,17 +402,20 @@
   }
 }
 
-.page-header__nav-dropdown-col {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding-right: 2rem;
-}
-
 .page-header__nav-dropdown-block {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  break-inside: avoid;
+  margin-bottom: 2.4rem;
+
+  @include breakpoint(desktop) {
+    margin-bottom: 1.6rem;
+  }
+
+  @include breakpoint(tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .page-header__nav-dropdown-category {

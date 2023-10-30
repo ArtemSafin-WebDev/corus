@@ -17,6 +17,8 @@ import menu from "./menu";
 import aboutAnimation from "./aboutAnimation";
 import intro from "./intro";
 import splitting from "./splitting";
+import callbackForm from "./callbackForm";
+import modals from "./modals";
 
 document.addEventListener("DOMContentLoaded", () => {
   smoothScrolling();
@@ -34,8 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
   menu();
   aboutAnimation();
   partnersSlider();
-
+  callbackForm();
   fixedHeader();
+  modals();
   lazyloading();
 });
 

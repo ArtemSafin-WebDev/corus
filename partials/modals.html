@@ -1,0 +1,117 @@
+<div class="callback-modal js-modal" id="callback-modal" data-lenis-prevent="">
+    <div class="callback-modal__inner">
+        <button class="callback-modal__close js-modal-close">
+            <svg width="14" height="14" aria-hidden="true">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <div class="callback-modal__content">
+            <h3 class="callback-modal__heading">
+                Напишите нам
+            </h3>
+            <div class="callback-modal__text">
+                Вы можете задать любой интересующий вопрос через форму обратной связи
+                и мы свяжемся с Вами в ближайшее время.
+            </div>
+            <form action="/" method="POST" class="callback-modal__form js-callback-form">
+                <div class="callback-modal__fields">
+                    <div class="callback-modal__field">
+                        <div class="callback-modal__input-wrapper">
+                            <input type="text" class="callback-modal__input" name="your-name" required=""
+                                placeholder="Имя">
+                        </div>
+                    </div>
+                    <div class="callback-modal__field">
+                        <div class="callback-modal__input-wrapper">
+                            <input type="email" class="callback-modal__input" name="your-email" required=""
+                                placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="callback-modal__field">
+                        <div class="callback-modal__input-wrapper">
+                            <input type="text" class="callback-modal__input" name="your-email" required=""
+                                placeholder="Фамилия">
+                        </div>
+                    </div>
+                    <div class="callback-modal__field">
+                        <div class="callback-modal__input-wrapper">
+                            <input type="text" class="callback-modal__input" name="your-email" placeholder="Компания">
+                        </div>
+                    </div>
+                    <div class="callback-modal__field">
+                        <div class="callback-modal__input-wrapper">
+                            <input type="tel" class="callback-modal__input" name="your-phone" required=""
+                                placeholder="Телефон">
+                        </div>
+                    </div>
+                    <div class="callback-modal__field">
+                        <div class="callback-modal__input-wrapper">
+                            <input type="text" class="callback-modal__input" name="your-role" placeholder="Должность">
+                        </div>
+                    </div>
+                </div>
+                <div class="callback-modal__communication">
+                    <h4 class="callback-modal__communication-heading">
+                        Предпочтительный способ связи
+                    </h4>
+                    <div class="callback-modal__communication-radio-buttons">
+                        <label class="callback-modal__communication-radio-button">
+                            <input type="radio" name="communication" value="Телефон"
+                                class="callback-modal__communication-radio-button-input" checked="">
+                            <span class="callback-modal__communication-radio-button-mark">
+
+                            </span>
+                            <span class="callback-modal__communication-radio-button-text">
+                                Телефон
+                            </span>
+                        </label>
+                        <label class="callback-modal__communication-radio-button">
+                            <input type="radio" name="communication" value="Email"
+                                class="callback-modal__communication-radio-button-input">
+                            <span class="callback-modal__communication-radio-button-mark">
+
+                            </span>
+                            <span class="callback-modal__communication-radio-button-text">
+                                Email
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="callback-modal__message">
+                    <div class="callback-modal__message-wrapper">
+                        <textarea name="your-message" class="callback-modal__message-input"
+                            placeholder="Ваше сообщение"></textarea>
+                    </div>
+                </div>
+                <div class="callback-modal__policy">
+                    Нажимая на кнопку «Отправить» Вы даёте своё согласие на обработку Персональных данных
+                </div>
+                <button class="callback-modal__submit" type="submit">
+                    Отправить
+                    <span class="callback-modal__submit-icon">
+                        <svg width="14" height="14" aria-hidden="true">
+                            <use xlink:href="#more-arrow"></use>
+                        </svg>
+                    </span>
+                </button>
+            </form>
+        </div>
+        <div class="callback-modal__success">
+            <h3 class="callback-modal__success-heading">
+                Спасибо!
+            </h3>
+            <div class="callback-modal__success-text">
+                Форма успешно отправлена! Мы скоро свяжемся с вами
+            </div>
+        </div>
+        <div class="callback-modal__error">
+            <h3 class="callback-modal__error-heading">
+                Упс...
+            </h3>
+            <div class="callback-modal__error-text">
+                Что-то пошло не так, пожалуйста, перезагрузите страницу и отправьте форму повторно.
+            </div>
+        </div>
+
+    </div>
+</div>
