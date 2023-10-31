@@ -19,6 +19,7 @@ import intro from "./intro";
 import splitting from "./splitting";
 import callbackForm from "./callbackForm";
 import modals from "./modals";
+import updateForm from "./updateForm";
 
 document.addEventListener("DOMContentLoaded", () => {
   smoothScrolling();
@@ -37,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   aboutAnimation();
   partnersSlider();
   callbackForm();
+  updateForm();
   fixedHeader();
   modals();
   lazyloading();

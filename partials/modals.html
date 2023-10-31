@@ -115,3 +115,70 @@
 
     </div>
 </div>
+
+<div class="update-modal js-modal" id="update-modal" data-lenis-prevent="">
+    <div class="update-modal__inner">
+        <button class="update-modal__close js-modal-close">
+            <svg width="14" height="14" aria-hidden="true">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <img src="/images/update-modal.webp" alt="" class="update-modal__image">
+        <h3 class="update-modal__heading">
+            Наш сайт обновляется, чтобы стать лучше для вас!
+        </h3>
+        <div class="update-modal__text">
+            Пока не все страницы доступны, но мы ценим ваше время и понимаем, что ответы на вопросы вам нужны прямо
+            сейчас. Напишите нам и мы предоставим всю необходимую информацию для начала решения вашей задачи.
+        </div>
+        <form action="/" class="update-modal__form js-update-form">
+            <div class="update-modal__form-fields">
+                <div class="update-modal__form-field">
+                    <div class="update-modal__form-input-wrapper">
+                        <input type="text" class="update-modal__form-input" name="your-firstname" placeholder="Имя"
+                            required="">
+                    </div>
+                </div>
+                <div class="update-modal__form-field">
+                    <div class="update-modal__form-input-wrapper">
+                        <input type="email" class="update-modal__form-input" name="your-email" placeholder="Email"
+                            required="">
+                    </div>
+                </div>
+                <div class="update-modal__form-field">
+                    <div class="update-modal__form-input-wrapper">
+                        <input type="email" class="update-modal__form-input" name="your-lastname" placeholder="Фамилия"
+                            required="">
+                    </div>
+                </div>
+                <div class="update-modal__form-field">
+                    <div class="update-modal__form-input-wrapper">
+                        <input type="text" class="update-modal__form-input" name="your-company" placeholder="Компания">
+                    </div>
+                </div>
+                <div class="update-modal__form-field">
+                    <div class="update-modal__form-input-wrapper">
+                        <input type="tel" class="update-modal__form-input" name="your-phone" placeholder="Телефон"
+                            required="">
+                    </div>
+                </div>
+                <div class="update-modal__form-field">
+                    <div class="update-modal__form-input-wrapper">
+                        <input type="text" class="update-modal__form-input" name="your-role" placeholder="Должность">
+                    </div>
+                </div>
+            </div>
+            <div class="update-modal__policy">
+                Нажимая на кнопку «Получить» Вы даёте своё согласие на обработку <a href="#">Персональных данных</a>
+            </div>
+            <button class="update-modal__submit" type="submit">
+                Получить
+                <span class="update-modal__submit-icon">
+                    <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#more-arrow"></use>
+                    </svg>
+                </span>
+            </button>
+        </form>
+    </div>
+</div>

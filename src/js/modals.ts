@@ -28,4 +28,25 @@ export default function modals() {
       document.body.classList.remove("modal-open");
     })
   );
+
+  const modals = Array.from(
+    document.querySelectorAll<HTMLElement>(".js-modal")
+  );
+
+  modals.forEach((modal) =>
+    modal.addEventListener("click", (event) => {
+      const target = event.target as HTMLElement;
+      if (target === modal) {
+        modal.classList.remove("active");
+        document.body.classList.remove("modal-open");
+      }
+    })
+  );
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      modals.forEach((modal) => modal.classList.remove("active"));
+      document.body.classList.remove("modal-open");
+    }
+  });
 }
