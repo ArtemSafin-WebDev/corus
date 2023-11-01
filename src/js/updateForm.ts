@@ -7,10 +7,6 @@ export default function updateForm() {
 
   forms.forEach((form) => {
     const formValidator = new Validator(form);
-
-    form.addEventListener("submit", (event) => {
-      formValidator.validate();
-      if (!formValidator.valid) event.preventDefault();
-    });
+    form.validator = formValidator;
   });
 }
