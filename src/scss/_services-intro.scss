@@ -1,0 +1,152 @@
+.services-intro {
+  @include blockWrapper;
+  padding-top: 12rem;
+  padding-bottom: 15rem;
+  background-color: #fff;
+
+  @include breakpoint(tablet) {
+    padding-top: 10rem;
+    padding-bottom: 7rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-top: 9.1rem;
+    padding-bottom: 8rem;
+  }
+}
+
+.services-intro__content {
+  @include blockContent;
+}
+
+.services-intro__breadcrumbs {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+  margin-bottom: 3rem;
+
+  a {
+    &::after {
+      content: " / ";
+    }
+    color: var(--primary-color);
+    &:link,
+    &:visited {
+      color: var(--primary-color);
+    }
+
+    &.active {
+      color: #9798a1;
+      cursor: default;
+      &:link,
+      &:visited {
+        color: #9798a1;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.services-intro__heading {
+  font-size: 9.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 10.2rem;
+  letter-spacing: -0.368rem;
+  text-transform: uppercase;
+  font-family: var(--drugs);
+  margin-bottom: 2rem;
+
+  b {
+    font-weight: inherit;
+    color: #8293a6;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 7.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 8rem;
+    letter-spacing: -0.288rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 5.2rem;
+    letter-spacing: -0.192rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4.2rem;
+    letter-spacing: -0.144rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+}
+
+.services-intro__text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8rem;
+  margin-bottom: 2rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.services-intro__link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.4rem;
+  letter-spacing: -0.064rem;
+  color: white;
+  padding: 0.4rem;
+  border-radius: 10rem;
+  padding-left: 2rem;
+  background-color: var(--primary-color);
+  transition: background-color 0.2s, color 0.2s;
+  &:link,
+  &:visited {
+    color: white;
+  }
+}
+
+.services-intro__link-icon {
+  flex-shrink: 0;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  background-color: white;
+  transition: background-color 0.2s;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--primary-color);
+    transition: fill 0.2s;
+  }
+}

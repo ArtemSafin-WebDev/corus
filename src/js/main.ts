@@ -20,6 +20,7 @@ import splitting from "./splitting";
 import callbackForm from "./callbackForm";
 import modals from "./modals";
 import updateForm from "./updateForm";
+import servicesSlider from "./servicesSlider";
 
 document.addEventListener("DOMContentLoaded", () => {
   smoothScrolling();
@@ -42,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fixedHeader();
   modals();
   lazyloading();
+  servicesSlider();
 });
 
 window.addEventListener("load", () => {

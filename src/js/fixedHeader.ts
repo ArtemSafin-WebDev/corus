@@ -25,15 +25,9 @@ export default function fixedHeader() {
 
   ScrollTrigger.create({
     onUpdate: (self) => {
-      console.log("direction:", self.direction);
-
       const direction = self.direction;
 
       const intro = document.querySelector<HTMLElement>(".intro");
-
-      const scrollY = window.scrollY;
-
-      console.log("ScrollY", scrollY);
 
       if (intro) {
         if (window.scrollY < intro.offsetHeight) {
