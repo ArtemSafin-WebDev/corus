@@ -11,23 +11,6 @@ export default function intro() {
   const elements = Array.from(document.querySelectorAll<HTMLElement>(".intro"));
 
   elements.forEach((element) => {
-    const bgSliderContainer =
-      element.querySelector<HTMLElement>(".intro__bg .swiper");
-
-    console.log("Bg slider", bgSliderContainer);
-    if (!bgSliderContainer) return;
-
-    const bgSlider = new Swiper(bgSliderContainer, {
-      modules: [Autoplay, Controller, EffectFade],
-      slidesPerView: 1,
-      speed: 1200,
-      effect: "fade",
-      fadeEffect: {
-        crossFade: false,
-      },
-      allowTouchMove: false,
-    });
-
     const textSliderContainer = element.querySelector<HTMLElement>(
       ".intro__text-content .swiper"
     );
@@ -100,8 +83,6 @@ export default function intro() {
     });
 
     textSlider.init();
-
-    textSlider.controller.control = bgSlider;
 
     let mm = gsap.matchMedia();
 
