@@ -54,16 +54,10 @@
     inset: 0;
     z-index: 5;
     background: rgba(0, 0, 0, 0.4);
-    -webkit-mask-image: url("../images/intro-new-mask-inverted.svg");
+    -webkit-mask-image: url("../images/intro-new-mask.svg");
     -webkit-mask-position: left top 9.9rem;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: cover;
-  }
-
-  @include breakpoint(desktop) {
-    &::before {
-      -webkit-mask-position: left -9rem top 9.9rem;
-    }
   }
 
   @include breakpoint(tablet) {
