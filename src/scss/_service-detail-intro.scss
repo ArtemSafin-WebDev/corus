@@ -1,0 +1,225 @@
+.service-detail-intro {
+  @include blockWrapper;
+  padding-top: 12rem;
+  margin-bottom: 10rem;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  grid-row-gap: 8rem;
+
+  &::before {
+    content: "";
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+    border-radius: 5rem 5rem 0px 0px;
+    background: #f6f7fa;
+    height: 26rem;
+    position: absolute;
+  }
+
+  @include breakpoint(tablet) {
+    grid-row-gap: 5rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-top: 9rem;
+    grid-row-gap: 5rem;
+    margin-bottom: 6rem;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.service-detail__intro-content {
+  @include blockContent;
+}
+
+.service-detail__intro-image-wrapper {
+  position: relative;
+
+  min-height: 50rem;
+  border-radius: 5rem;
+  overflow: hidden;
+
+  @include breakpointMF(tablet) {
+    @include blockContent;
+  }
+
+  @include breakpoint(tablet) {
+    border-radius: 3rem;
+    min-height: 35rem;
+  }
+
+  @include breakpoint(mobile) {
+    grid-column: 1 / -1;
+    min-height: 50rem;
+    border-radius: 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 4rem;
+    bottom: 4rem;
+    width: 1.6rem;
+    height: 3.7rem;
+    background-image: url("../images/service-detail-quote.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include breakpoint(mobile) {
+      left: 1.2rem;
+      bottom: 4rem;
+    }
+  }
+}
+
+.service-detail__intro-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-detail__intro-breadcrumbs {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+  margin-bottom: 2rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 4rem;
+  }
+
+  a {
+    &::after {
+      content: " / ";
+    }
+    color: var(--primary-color);
+    &:link,
+    &:visited {
+      color: var(--primary-color);
+    }
+
+    &.active {
+      color: #9798a1;
+      cursor: default;
+      &:link,
+      &:visited {
+        color: #9798a1;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.service-detail__heading {
+  font-size: 9.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 10.2rem;
+  letter-spacing: -0.368rem;
+  text-transform: uppercase;
+  font-family: var(--drugs);
+  margin-bottom: 2rem;
+
+  b {
+    font-weight: inherit;
+    color: #8293a6;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 7.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 8rem;
+    letter-spacing: -0.288rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 5.2rem;
+    letter-spacing: -0.192rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4rem;
+    letter-spacing: -0.128rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+}
+
+.service-detail__text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8rem;
+  margin-bottom: 2rem;
+  max-width: 82rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.service-detail__link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.4rem;
+  letter-spacing: -0.064rem;
+  color: white;
+  padding: 0.4rem;
+  border-radius: 10rem;
+  padding-left: 2rem;
+  background-color: var(--primary-color);
+  transition: background-color 0.2s, color 0.2s;
+  &:link,
+  &:visited {
+    color: white;
+  }
+}
+
+.service-detail__link-icon {
+  flex-shrink: 0;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  background-color: white;
+  transition: background-color 0.2s;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--primary-color);
+    transition: fill 0.2s;
+  }
+}

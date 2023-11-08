@@ -21,6 +21,8 @@ import callbackForm from "./callbackForm";
 import modals from "./modals";
 import updateForm from "./updateForm";
 import servicesSlider from "./servicesSlider";
+import benefitsSlider from "./benefitsSlider";
+import controlSlider from "./controlSlider";
 
 document.addEventListener("DOMContentLoaded", () => {
   smoothScrolling();
@@ -44,6 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
   modals();
   lazyloading();
   servicesSlider();
+  benefitsSlider();
+  controlSlider();
 });
 
 window.addEventListener("load", () => {

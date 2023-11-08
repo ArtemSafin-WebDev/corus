@@ -11,6 +11,71 @@
   }
 }
 
+.about--service {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 33.5rem;
+    background-color: #fff;
+    z-index: -1;
+    pointer-events: none;
+    width: 100%;
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+
+    @include breakpoint(tablet) {
+      border-bottom-left-radius: 3rem;
+      border-bottom-right-radius: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      height: 29rem;
+    }
+  }
+}
+
+.about__top-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.about__learn-more {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.4rem;
+  letter-spacing: -0.016rem;
+  color: var(--primary-color);
+
+  svg {
+    flex-shrink: 0;
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+
+  &:link,
+  &:visited {
+    color: var(--primary-color);
+  }
+
+  @include breakpoint(mobile) {
+    order: 15;
+    align-self: center;
+    margin-top: 3rem;
+  }
+}
+
 .about__content {
   @include blockContent;
   display: flex;
@@ -26,6 +91,10 @@
   text-transform: uppercase;
   font-family: var(--drugs);
   display: none;
+
+  .about--service & {
+    display: block;
+  }
 
   b {
     font-weight: inherit;
@@ -58,6 +127,15 @@
     line-height: 4.2rem;
     letter-spacing: -0.144rem;
     text-transform: uppercase;
+
+    .about--service & {
+      font-size: 3.2rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 4rem;
+      letter-spacing: -0.128rem;
+      text-transform: uppercase;
+    }
   }
 }
 

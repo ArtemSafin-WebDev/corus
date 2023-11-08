@@ -1,13 +1,17 @@
 .platform {
   @include blockWrapper;
-  margin-bottom: 13rem;
+  padding-bottom: 13rem;
+
+  &--service {
+    background-color: #fff;
+  }
 
   @include breakpoint(tablet) {
-    margin-bottom: 8rem;
+    padding-bottom: 8rem;
   }
 
   @include breakpoint(mobile) {
-    margin-bottom: 6rem;
+    padding-bottom: 6rem;
   }
 }
 
@@ -56,6 +60,15 @@
     line-height: 4.2rem;
     letter-spacing: -0.144rem;
     text-transform: uppercase;
+
+    .platform--service & {
+      font-size: 3.2rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 4rem;
+      letter-spacing: -0.128rem;
+      text-transform: uppercase;
+    }
   }
 }
 
@@ -67,8 +80,8 @@
   letter-spacing: -0.072rem;
   margin-top: 2rem;
 
-  @include breakpoint(desktop) {
-    margin-top: 3rem;
+  .platform--service & {
+    margin-top: 1rem;
   }
 
   @include breakpoint(tablet) {
@@ -125,11 +138,18 @@
   background: white;
   color: var(--text-color);
   gap: 1rem;
-  transition: color 0.2s, background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+
+  .platform--service & {
+    border-radius: 5rem;
+    border: 1px solid #e3e8ef;
+    background: var(--ffffff-white, #fff);
+  }
 
   @media (hover: hover) {
     &:hover {
       background: #8293a6;
+      border-color: #8293a6;
       color: white;
 
       .platform__slider-card-image {

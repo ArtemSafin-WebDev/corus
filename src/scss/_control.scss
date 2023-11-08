@@ -1,0 +1,143 @@
+.control {
+  @include blockWrapper;
+  margin-bottom: 10rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 6rem;
+  }
+}
+
+.control__content {
+  @include blockContent;
+}
+
+.control__heading {
+  font-size: 9.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 10.2rem;
+  letter-spacing: -0.368rem;
+  text-transform: uppercase;
+  font-family: var(--drugs);
+  margin-bottom: 3rem;
+  b {
+    font-weight: inherit;
+    color: #8293a6;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 7.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 8rem;
+    letter-spacing: -0.288rem;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 5.2rem;
+    letter-spacing: -0.192rem;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4rem;
+    letter-spacing: -0.128rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+}
+
+.control__slider {
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: calc(33.33% - (2.4rem * 2 / 3));
+    margin-right: 2.4rem;
+    height: auto;
+    @include breakpoint(desktop) {
+      width: calc(33.33% - (1.6rem * 2 / 3));
+      margin-right: 1.6rem;
+    }
+
+    @include breakpoint(tablet) {
+      width: 35rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.control__slider-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 2.4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  border-radius: 5rem;
+  border: 1px solid #e3e8ef;
+  gap: 3rem;
+  flex-grow: 1;
+  @include breakpoint(mobile) {
+    border-radius: 5rem;
+    border: 1px solid #e3e8ef;
+    background: white;
+    gap: 3rem;
+  }
+}
+
+.control__slider-card-title {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+}
+
+.control__slider-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.control__slider-card-list-item {
+  position: relative;
+  color: #424a53;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+
+  padding-left: 2.1rem;
+
+  &::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    position: absolute;
+
+    transform: translateY(-50%);
+    background-color: currentColor;
+    left: 1rem;
+    top: 0.88em;
+    border-radius: 50%;
+  }
+}

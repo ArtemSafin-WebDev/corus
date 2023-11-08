@@ -4,7 +4,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function aboutAnimation() {
-  const elements = Array.from(document.querySelectorAll<HTMLElement>(".about"));
+  const elements = Array.from(
+    document.querySelectorAll<HTMLElement>(".about:not(.about--service)")
+  );
   let mm = gsap.matchMedia();
   elements.forEach((element) => {
     const slider = element.querySelector<HTMLElement>(".about__slider");

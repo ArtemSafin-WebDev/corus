@@ -1,0 +1,119 @@
+.approaches {
+  @include blockWrapper;
+  margin-bottom: 8rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 4rem;
+  }
+}
+
+.approaches__content {
+  @include blockContent;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 1.6rem;
+  grid-row-gap: 5rem;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.approaches__heading {
+  font-size: 9.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 10.2rem;
+  letter-spacing: -0.368rem;
+  text-transform: uppercase;
+  font-family: var(--drugs);
+  grid-column: 1 / -1;
+
+  b {
+    font-weight: inherit;
+    color: #8293a6;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 7.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 8rem;
+    letter-spacing: -0.288rem;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 5.2rem;
+    letter-spacing: -0.192rem;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4rem;
+    letter-spacing: -0.128rem;
+    text-transform: uppercase;
+  }
+}
+
+.approaches__list {
+  grid-column: 5 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 1.6rem;
+
+  @include breakpoint(tablet) {
+    grid-column: 1 / -1;
+  }
+
+  @include breakpoint(mobile) {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.approaches__list-item {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(105, 119, 144, 0.5);
+  display: grid;
+  grid-template-columns: 2.6rem 1fr;
+  grid-gap: 2rem;
+  padding-right: 2rem;
+
+  &::before {
+    content: counter(ordered-list, decimal-leading-zero);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 2.4rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    grid-column: 1 / 2;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    grid-template-columns: 2rem 1fr;
+  }
+}
