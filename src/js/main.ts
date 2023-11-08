@@ -23,6 +23,7 @@ import updateForm from "./updateForm";
 import servicesSlider from "./servicesSlider";
 import benefitsSlider from "./benefitsSlider";
 import controlSlider from "./controlSlider";
+import contactsPage from "./contactsPage";
 
 document.addEventListener("DOMContentLoaded", () => {
   smoothScrolling();
@@ -48,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   servicesSlider();
   benefitsSlider();
   controlSlider();
+  contactsPage();
 });
 
 window.addEventListener("load", () => {
