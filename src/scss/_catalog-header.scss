@@ -1,0 +1,149 @@
+.catalog-header {
+  @include blockWrapper;
+  background-color: #fff;
+  padding-top: 12rem;
+  padding-bottom: 14.2rem;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 12rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 8rem;
+    padding-top: 9rem;
+  }
+}
+
+.catalog-header__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-header__breadcrumbs {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+  margin-bottom: 3rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 4rem;
+  }
+
+  a {
+    &::after {
+      content: " / ";
+    }
+    color: var(--primary-color);
+    &:link,
+    &:visited {
+      color: var(--primary-color);
+    }
+
+    &.active {
+      color: #9798a1;
+      cursor: default;
+      &:link,
+      &:visited {
+        color: #9798a1;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.catalog-header__heading {
+  font-size: 9.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 10.2rem;
+  letter-spacing: -0.368rem;
+  text-transform: uppercase;
+  font-family: var(--drugs);
+  margin-bottom: 1rem;
+
+  b {
+    font-weight: inherit;
+    color: #8293a6;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 7.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 8rem;
+    letter-spacing: -0.288rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 5.2rem;
+    letter-spacing: -0.192rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4rem;
+    letter-spacing: -0.128rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+}
+
+.catalog-header__text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8rem;
+  margin-bottom: 2rem;
+}
+
+.catalog-header__link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.4rem;
+  letter-spacing: -0.064rem;
+  color: white;
+  padding: 0.4rem;
+  border-radius: 10rem;
+  padding-left: 2rem;
+  background-color: var(--primary-color);
+  transition: background-color 0.2s, color 0.2s;
+  &:link,
+  &:visited {
+    color: white;
+  }
+}
+
+.catalog-header__link-icon {
+  flex-shrink: 0;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  background-color: white;
+  transition: background-color 0.2s;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--primary-color);
+    transition: fill 0.2s;
+  }
+}

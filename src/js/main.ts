@@ -24,6 +24,9 @@ import servicesSlider from "./servicesSlider";
 import benefitsSlider from "./benefitsSlider";
 import controlSlider from "./controlSlider";
 import contactsPage from "./contactsPage";
+import showAllCheckboxes from "./showAllCheckboxes";
+import accordions from "./accordions";
+import catalogFilters from "./catalogFilters";
 
 document.addEventListener("DOMContentLoaded", () => {
   smoothScrolling();
@@ -50,6 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
   benefitsSlider();
   controlSlider();
   contactsPage();
+  showAllCheckboxes();
+  accordions();
+  catalogFilters();
 });
 
 window.addEventListener("load", () => {
