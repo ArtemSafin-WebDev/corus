@@ -68,7 +68,7 @@ export default function intro() {
         crossFade: true,
       },
       autoplay: {
-        delay: 4000,
+        delay: 2000,
         disableOnInteraction: true,
       },
       init: false,

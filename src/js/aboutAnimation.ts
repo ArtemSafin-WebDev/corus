@@ -5,7 +5,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function aboutAnimation() {
   const elements = Array.from(
-    document.querySelectorAll<HTMLElement>(".about:not(.about--service)")
+    document.querySelectorAll<HTMLElement>(
+      ".about:not(.about--service):not(.about--experience)"
+    )
   );
   let mm = gsap.matchMedia();
   elements.forEach((element) => {

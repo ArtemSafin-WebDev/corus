@@ -1,0 +1,126 @@
+.project-brief {
+  @include blockWrapper;
+  padding-bottom: 10rem;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 32.6rem;
+    background-color: #fff;
+    z-index: -1;
+    bottom: 0;
+  }
+  @include breakpoint(mobile) {
+    padding-bottom: 0;
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.project-brief__content {
+  @include blockContent;
+}
+
+.project-brief__row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 1.6rem;
+  margin-bottom: 10rem;
+
+  @include breakpoint(tablet) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 6rem;
+  }
+}
+
+.project-brief__heading {
+  font-size: 7.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 8rem;
+  letter-spacing: -0.288rem;
+  text-transform: uppercase;
+  grid-column: 1 / 5;
+  font-family: var(--drugs);
+  b {
+    font-weight: inherit;
+    color: #8293a6;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 5.2rem;
+    letter-spacing: -0.192rem;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4rem;
+    letter-spacing: -0.128rem;
+    text-transform: uppercase;
+  }
+}
+
+.project-brief__text {
+  grid-column: 6 / -1;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8rem;
+  color: #424a53;
+
+  b {
+    font-weight: 700;
+  }
+
+  p {
+    margin-top: 2rem;
+
+    @include breakpoint(mobile) {
+      margin-top: 1rem;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.project-brief__image-wrapper {
+  position: relative;
+  border-radius: 5rem;
+  overflow: hidden;
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 37%;
+  }
+
+  @include breakpoint(tablet) {
+    border-radius: 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.project-brief__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

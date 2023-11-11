@@ -96,6 +96,10 @@
     display: block;
   }
 
+  .about--experience & {
+    display: block;
+  }
+
   b {
     font-weight: inherit;
     color: #8293a6;
@@ -129,6 +133,15 @@
     text-transform: uppercase;
 
     .about--service & {
+      font-size: 3.2rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 4rem;
+      letter-spacing: -0.128rem;
+      text-transform: uppercase;
+    }
+
+    .about--experience & {
       font-size: 3.2rem;
       font-style: normal;
       font-weight: 300;

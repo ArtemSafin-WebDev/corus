@@ -1,0 +1,147 @@
+.quote {
+  @include blockWrapper;
+  padding-bottom: 10rem;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 8rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 6rem;
+    background-color: #fff;
+  }
+}
+
+.quote__content {
+  @include blockContent;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 1.6rem;
+
+  @include breakpoint(tablet) {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+.quote__author {
+  grid-column: 1 / 6;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 1.7rem;
+
+  @include breakpoint(mobile) {
+    gap: 1.2rem;
+  }
+}
+
+.quote__author-image-wrapper {
+  position: relative;
+  border-radius: 50%;
+  width: 9.7rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  margin-top: 0.5rem;
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  @include breakpoint(mobile) {
+    width: 8rem;
+  }
+}
+
+.quote__author-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quote__author-content {
+  width: 30%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @include breakpoint(mobile) {
+    gap: 1rem;
+  }
+}
+
+.quote__author-name {
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -0.192rem;
+  font-family: var(--drugs);
+
+  @include breakpoint(tablet) {
+    font-size: 3.2rem;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.096rem;
+  }
+}
+
+.quote__author-role {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+
+.quote__text-content {
+  grid-column: 6 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 6.4rem;
+
+  @include breakpoint(tablet) {
+    padding: 0;
+  }
+}
+
+.quote__text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+
+.quote__link {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.4rem;
+  letter-spacing: -0.016rem;
+  color: var(--primary-color);
+  align-self: flex-start;
+  svg {
+    flex-shrink: 0;
+    width: 4.2rem;
+    height: 4.2rem;
+    fill: currentColor;
+  }
+  &:link,
+  &:visited {
+    color: var(--primary-color);
+  }
+}

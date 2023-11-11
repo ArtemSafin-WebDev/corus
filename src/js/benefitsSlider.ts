@@ -7,8 +7,6 @@ export default function benefitsSlider() {
     document.querySelectorAll<HTMLElement>(".js-benefits-slider")
   );
 
-  const mql = window.matchMedia("(max-width: 1024px)");
-
   elements.forEach((element) => {
     const container = element.querySelector<HTMLElement>(".swiper");
     if (!container) return;
@@ -18,20 +16,6 @@ export default function benefitsSlider() {
       speed: 600,
     };
 
-    let instance: Swiper | null = null;
-
-    const handleWidthChange = (e: MediaQueryListEvent | MediaQueryList) => {
-      if (e.matches) {
-        if (instance) instance.destroy();
-        instance = new Swiper(container, options);
-      } else {
-        if (instance) instance.destroy();
-        instance = null;
-      }
-    };
-
-    mql.addEventListener("change", handleWidthChange);
-
-    handleWidthChange(mql);
+    new Swiper(container, options);
   });
 }
