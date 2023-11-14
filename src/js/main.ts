@@ -27,6 +27,7 @@ import contactsPage from "./contactsPage";
 import showAllCheckboxes from "./showAllCheckboxes";
 import accordions from "./accordions";
 import catalogFilters from "./catalogFilters";
+import quotes from "./quotesSlider";
 
 document.addEventListener("DOMContentLoaded", () => {
   smoothScrolling();
@@ -56,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
   showAllCheckboxes();
   accordions();
   catalogFilters();
+  quotes();
 });
 
 window.addEventListener("load", () => {

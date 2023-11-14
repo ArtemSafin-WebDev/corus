@@ -2,6 +2,21 @@
   @include blockWrapper;
   margin-bottom: 8rem;
 
+  &--article {
+    padding-top: 10rem;
+    border-radius: 5rem 5rem 0px 0px;
+    background: #f6f7fa;
+    margin-top: -5rem;
+    position: relative;
+    z-index: 10;
+
+    @include breakpoint(tablet) {
+      padding-top: 6rem;
+      border-radius: 3rem 3rem 0px 0px;
+      margin-top: -3rem;
+    }
+  }
+
   @media (max-width: 576px) {
     margin-bottom: 6rem;
   }

@@ -1,0 +1,160 @@
+.press-release-intro {
+  @include blockWrapper;
+  padding-top: 12rem;
+  padding-bottom: 5rem;
+  background-color: #fff;
+
+  @include breakpoint(mobile) {
+    padding-top: 9rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.press-release-intro__content {
+  @include blockContent;
+}
+
+.press-release-intro__breadcrumbs {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+  margin-bottom: 2rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 4rem;
+  }
+
+  a {
+    &::after {
+      content: " / ";
+    }
+    color: var(--primary-color);
+    &:link,
+    &:visited {
+      color: var(--primary-color);
+    }
+
+    &.active {
+      color: #9798a1;
+      cursor: default;
+      &:link,
+      &:visited {
+        color: #9798a1;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.press-release-intro__wrapper {
+  padding: 0 11.3rem;
+
+  @include breakpoint(mobile) {
+    padding: 0;
+  }
+}
+
+.press-release-intro__wrapper-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @include breakpoint(mobile) {
+    gap: 2rem;
+  }
+}
+
+.press-release-intro__heading {
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 5.2rem;
+  letter-spacing: -0.192rem;
+  text-transform: uppercase;
+  font-family: var(--drugs);
+
+  @include breakpoint(mobile) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4rem;
+    letter-spacing: -0.128rem;
+    text-transform: uppercase;
+  }
+}
+
+.press-release-intro__bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+  }
+}
+
+.press-release-intro__info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: #424a53;
+  flex-wrap: wrap;
+  row-gap: 0;
+}
+
+.press-release-intro__info-item {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8rem;
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+  color: #424a53;
+  &--orange {
+    color: var(--primary-color);
+  }
+  &::after {
+    content: "|";
+    flex-shrink: 0;
+    color: #424a53;
+  }
+
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.press-release-intro__share-link {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.8rem;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  color: var(--primary-color);
+  &:link,
+  &:visited {
+    color: var(--primary-color);
+  }
+
+  svg {
+    flex-shrink: 0;
+    width: 2.8rem;
+    height: 2.8rem;
+    fill: currentColor;
+  }
+}

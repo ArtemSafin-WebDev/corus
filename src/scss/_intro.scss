@@ -179,15 +179,6 @@
   justify-content: center;
 }
 
-// @keyframes char {
-//   0% {
-//     visibility: hidden;
-//   }
-//   100% {
-//     visibility: inherit;
-//   }
-// }
-
 .intro__heading {
   font-size: 12rem;
   font-style: normal;
@@ -196,13 +187,6 @@
   letter-spacing: -0.48rem;
   text-transform: uppercase;
   font-family: var(--drugs);
-
-  // .char {
-  //   visibility: hidden;
-  //   animation: char 0s steps(2) forwards;
-  //   animation-delay: calc(0.1s * var(--char-index));
-  //   animation-iteration-count: infinite;
-  // }
 
   @include breakpoint(desktop) {
     font-size: 10rem;

@@ -1,22 +1,24 @@
 export default function catalogFilters() {
-  const openBtns = Array.from(
-    document.querySelectorAll<HTMLButtonElement>(".js-filters-open")
-  );
-  const closeBtns = Array.from(
-    document.querySelectorAll<HTMLButtonElement>(".js-filters-close")
-  );
+  document.addEventListener("click", (event) => {
+    const target = event.target as HTMLElement;
 
-  openBtns.forEach((btn) =>
-    btn.addEventListener("click", (event) => {
+    if (
+      target.matches(".js-filters-open") ||
+      target.closest(".js-filters-open")
+    ) {
       event.preventDefault();
       document.body.classList.add("filters-open");
-    })
-  );
+    }
+  });
+  document.addEventListener("click", (event) => {
+    const target = event.target as HTMLElement;
 
-  closeBtns.forEach((btn) => {
-    btn.addEventListener("click", (event) => {
+    if (
+      target.matches(".js-filters-close") ||
+      target.closest(".js-filters-close")
+    ) {
       event.preventDefault();
       document.body.classList.remove("filters-open");
-    });
+    }
   });
 }
