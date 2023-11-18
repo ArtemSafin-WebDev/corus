@@ -8,6 +8,7 @@ import pressRelease from "./pages-data/press-release";
 import article from "./pages-data/article";
 import platforms from "./pages-data/platforms";
 import platform from "./pages-data/platform";
+import clients from "./pages-data/clients";
 
 const pagesConfig = {
   ...home,
@@ -20,6 +21,7 @@ const pagesConfig = {
   ...article,
   ...platforms,
   ...platform,
+  ...clients,
 };
 
 export default pagesConfig;

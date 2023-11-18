@@ -1,0 +1,390 @@
+<section class="catalog-content">
+    <div class="catalog-content__wrapper">
+        <div class="catalog-content__sidebar">
+            <div class="catalog-content__filters">
+                <button class="catalog-content__filters-btn js-filters-open">
+                    Фильтр
+                </button>
+                <div class="catalog-content__filters-dropdown">
+                    <div class="catalog-content__filters-dropdown-inner">
+                        <button class="catalog-content__filters-close js-filters-close" type="button">
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#filters-close"></use>
+                            </svg>
+                        </button>
+                        <h2 class="catalog-content__filters-dropdown-heading">
+                            фильтр
+                        </h2>
+                        <form action="/" method="GET" class="catalog-content__filters-form">
+                            <div class="catalog-content__filters-blocks">
+                                <div class="catalog-content__filters-block js-accordion active">
+                                    <button class="catalog-content__filters-block-btn js-accordion-btn">
+                                        Отрасль
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#accordion-arrow"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="catalog-content__filters-block-content js-accordion-content">
+                                        <div class="catalog-content__filters-block-content-inner">
+                                            <div class="catalog-content__filters-checkboxes">
+                                                <label class="catalog-content__filters-checkbox">
+                                                    <input type="checkbox"
+                                                        class="catalog-content__filters-checkbox-input" name="industry"
+                                                        value="Диверсифицированный холдинг">
+                                                    <span class="catalog-content__filters-checkbox-mark">
+                                                        <svg width="14" height="14" aria-hidden="true">
+                                                            <use xlink:href="#checkmark"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="catalog-content__filters-checkbox-text">
+                                                        Диверсифицированный холдинг
+                                                    </span>
+                                                </label>
+                                                <label class="catalog-content__filters-checkbox">
+                                                    <input type="checkbox"
+                                                        class="catalog-content__filters-checkbox-input" name="industry"
+                                                        value="Промышленность и производство">
+                                                    <span class="catalog-content__filters-checkbox-mark">
+                                                        <svg width="14" height="14" aria-hidden="true">
+                                                            <use xlink:href="#checkmark"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="catalog-content__filters-checkbox-text">
+                                                        Промышленность и производство
+                                                    </span>
+                                                </label>
+                                                <label class="catalog-content__filters-checkbox">
+                                                    <input type="checkbox"
+                                                        class="catalog-content__filters-checkbox-input" name="industry"
+                                                        value="Машиностроение">
+                                                    <span class="catalog-content__filters-checkbox-mark">
+                                                        <svg width="14" height="14" aria-hidden="true">
+                                                            <use xlink:href="#checkmark"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="catalog-content__filters-checkbox-text">
+                                                        Машиностроение
+                                                    </span>
+                                                </label>
+
+                                                <label class="catalog-content__filters-checkbox">
+                                                    <input type="checkbox"
+                                                        class="catalog-content__filters-checkbox-input" name="industry"
+                                                        value="Металлургия">
+                                                    <span class="catalog-content__filters-checkbox-mark">
+                                                        <svg width="14" height="14" aria-hidden="true">
+                                                            <use xlink:href="#checkmark"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="catalog-content__filters-checkbox-text">
+                                                        Металлургия
+                                                    </span>
+                                                </label>
+                                                <label class="catalog-content__filters-checkbox">
+                                                    <input type="checkbox"
+                                                        class="catalog-content__filters-checkbox-input" name="industry"
+                                                        value="Добыча полезных ископаемых">
+                                                    <span class="catalog-content__filters-checkbox-mark">
+                                                        <svg width="14" height="14" aria-hidden="true">
+                                                            <use xlink:href="#checkmark"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="catalog-content__filters-checkbox-text">
+                                                        Добыча полезных ископаемых
+                                                    </span>
+                                                </label>
+                                                <label class="catalog-content__filters-checkbox">
+                                                    <input type="checkbox"
+                                                        class="catalog-content__filters-checkbox-input" name="industry"
+                                                        value="Нефтегазовый сектор">
+                                                    <span class="catalog-content__filters-checkbox-mark">
+                                                        <svg width="14" height="14" aria-hidden="true">
+                                                            <use xlink:href="#checkmark"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="catalog-content__filters-checkbox-text">
+                                                        Нефтегазовый сектор
+                                                    </span>
+                                                </label>
+                                                <label class="catalog-content__filters-checkbox">
+                                                    <input type="checkbox"
+                                                        class="catalog-content__filters-checkbox-input" name="industry"
+                                                        value="Сельское хозяйство и АПК">
+                                                    <span class="catalog-content__filters-checkbox-mark">
+                                                        <svg width="14" height="14" aria-hidden="true">
+                                                            <use xlink:href="#checkmark"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="catalog-content__filters-checkbox-text">
+                                                        Сельское хозяйство и АПК
+                                                    </span>
+                                                </label>
+                                                <label class="catalog-content__filters-checkbox">
+                                                    <input type="checkbox"
+                                                        class="catalog-content__filters-checkbox-input" name="industry"
+                                                        value="Транспорт и логистика">
+                                                    <span class="catalog-content__filters-checkbox-mark">
+                                                        <svg width="14" height="14" aria-hidden="true">
+                                                            <use xlink:href="#checkmark"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="catalog-content__filters-checkbox-text">
+                                                        Транспорт и логистика
+                                                    </span>
+                                                </label>
+                                                <label class="catalog-content__filters-checkbox">
+                                                    <input type="checkbox"
+                                                        class="catalog-content__filters-checkbox-input" name="industry"
+                                                        value="Финансовый сектор">
+                                                    <span class="catalog-content__filters-checkbox-mark">
+                                                        <svg width="14" height="14" aria-hidden="true">
+                                                            <use xlink:href="#checkmark"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="catalog-content__filters-checkbox-text">
+                                                        Финансовый сектор
+                                                    </span>
+                                                </label>
+                                                <label class="catalog-content__filters-checkbox">
+                                                    <input type="checkbox"
+                                                        class="catalog-content__filters-checkbox-input" name="industry"
+                                                        value="Розничная торговля">
+                                                    <span class="catalog-content__filters-checkbox-mark">
+                                                        <svg width="14" height="14" aria-hidden="true">
+                                                            <use xlink:href="#checkmark"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="catalog-content__filters-checkbox-text">
+                                                        Розничная торговля
+                                                    </span>
+                                                </label>
+                                                <label class="catalog-content__filters-checkbox">
+                                                    <input type="checkbox"
+                                                        class="catalog-content__filters-checkbox-input" name="industry"
+                                                        value="Оптовая торговля и дистрибуция">
+                                                    <span class="catalog-content__filters-checkbox-mark">
+                                                        <svg width="14" height="14" aria-hidden="true">
+                                                            <use xlink:href="#checkmark"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="catalog-content__filters-checkbox-text">
+                                                        Оптовая торговля и дистрибуция
+                                                    </span>
+                                                </label>
+                                                <label class="catalog-content__filters-checkbox">
+                                                    <input type="checkbox"
+                                                        class="catalog-content__filters-checkbox-input" name="industry"
+                                                        value="Фарма и здравоохранение">
+                                                    <span class="catalog-content__filters-checkbox-mark">
+                                                        <svg width="14" height="14" aria-hidden="true">
+                                                            <use xlink:href="#checkmark"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="catalog-content__filters-checkbox-text">
+                                                        Фарма и здравоохранение
+                                                    </span>
+                                                </label>
+                                                <label class="catalog-content__filters-checkbox">
+                                                    <input type="checkbox"
+                                                        class="catalog-content__filters-checkbox-input" name="industry"
+                                                        value="Связь и Телекоммуникации">
+                                                    <span class="catalog-content__filters-checkbox-mark">
+                                                        <svg width="14" height="14" aria-hidden="true">
+                                                            <use xlink:href="#checkmark"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="catalog-content__filters-checkbox-text">
+                                                        Связь и Телекоммуникации
+                                                    </span>
+                                                </label>
+                                                <label class="catalog-content__filters-checkbox">
+                                                    <input type="checkbox"
+                                                        class="catalog-content__filters-checkbox-input" name="industry"
+                                                        value="Информационные технологии">
+                                                    <span class="catalog-content__filters-checkbox-mark">
+                                                        <svg width="14" height="14" aria-hidden="true">
+                                                            <use xlink:href="#checkmark"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="catalog-content__filters-checkbox-text">
+                                                        Информационные технологии
+                                                    </span>
+                                                </label>
+                                                <label class="catalog-content__filters-checkbox">
+                                                    <input type="checkbox"
+                                                        class="catalog-content__filters-checkbox-input" name="industry"
+                                                        value="Строительство и недвижимость">
+                                                    <span class="catalog-content__filters-checkbox-mark">
+                                                        <svg width="14" height="14" aria-hidden="true">
+                                                            <use xlink:href="#checkmark"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="catalog-content__filters-checkbox-text">
+                                                        Строительство и недвижимость
+                                                    </span>
+                                                </label>
+                                                <label class="catalog-content__filters-checkbox">
+                                                    <input type="checkbox"
+                                                        class="catalog-content__filters-checkbox-input" name="industry"
+                                                        value="Профессиональные услуги">
+                                                    <span class="catalog-content__filters-checkbox-mark">
+                                                        <svg width="14" height="14" aria-hidden="true">
+                                                            <use xlink:href="#checkmark"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="catalog-content__filters-checkbox-text">
+                                                        Профессиональные услуги
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <button class="catalog-content__filters-checkboxes-show-all">
+                                                <span class="catalog-content__filters-checkboxes-show-all-text">
+                                                    Показать все
+                                                </span>
+                                                <span class="catalog-content__filters-checkboxes-show-all-text">
+                                                    Скрыть
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="catalog-content__main">
+            <ul class="catalog-content__clients-list">
+                <li class="catalog-content__clients-list-item">
+                    <a href="#" class="catalog-content__clients-card">
+                        <div class="catalog-content__clients-card-image-container">
+                            <img src="/images/clients/1.webp" alt="" class="catalog-content__clients-card-image"
+                                loading="lazy">
+                        </div>
+                    </a>
+                </li>
+                <li class="catalog-content__clients-list-item">
+                    <a href="#" class="catalog-content__clients-card">
+                        <div class="catalog-content__clients-card-image-container">
+                            <img src="/images/clients/2.webp" alt="" class="catalog-content__clients-card-image"
+                                loading="lazy">
+                        </div>
+                    </a>
+                </li>
+                <li class="catalog-content__clients-list-item">
+                    <a href="#" class="catalog-content__clients-card">
+                        <div class="catalog-content__clients-card-image-container">
+                            <img src="/images/clients/3.webp" alt="" class="catalog-content__clients-card-image"
+                                loading="lazy">
+                        </div>
+                    </a>
+                </li>
+                <li class="catalog-content__clients-list-item">
+                    <a href="#" class="catalog-content__clients-card">
+                        <div class="catalog-content__clients-card-image-container">
+                            <img src="/images/clients/4.webp" alt="" class="catalog-content__clients-card-image"
+                                loading="lazy">
+                        </div>
+                    </a>
+                </li>
+                <li class="catalog-content__clients-list-item">
+                    <a href="#" class="catalog-content__clients-card">
+                        <div class="catalog-content__clients-card-image-container">
+                            <img src="/images/clients/5.webp" alt="" class="catalog-content__clients-card-image"
+                                loading="lazy">
+                        </div>
+                    </a>
+                </li>
+                <li class="catalog-content__clients-list-item">
+                    <a href="#" class="catalog-content__clients-card">
+                        <div class="catalog-content__clients-card-image-container">
+                            <img src="/images/clients/6.webp" alt="" class="catalog-content__clients-card-image"
+                                loading="lazy">
+                        </div>
+                    </a>
+                </li>
+                <li class="catalog-content__clients-list-item">
+                    <a href="#" class="catalog-content__clients-card">
+                        <div class="catalog-content__clients-card-image-container">
+                            <img src="/images/clients/7.webp" alt="" class="catalog-content__clients-card-image"
+                                loading="lazy">
+                        </div>
+                    </a>
+                </li>
+                <li class="catalog-content__clients-list-item">
+                    <a href="#" class="catalog-content__clients-card">
+                        <div class="catalog-content__clients-card-image-container">
+                            <img src="/images/clients/8.webp" alt="" class="catalog-content__clients-card-image"
+                                loading="lazy">
+                        </div>
+                    </a>
+                </li>
+                <li class="catalog-content__clients-list-item">
+                    <a href="#" class="catalog-content__clients-card">
+                        <div class="catalog-content__clients-card-image-container">
+                            <img src="/images/clients/9.webp" alt="" class="catalog-content__clients-card-image"
+                                loading="lazy">
+                        </div>
+                    </a>
+                </li>
+                <li class="catalog-content__clients-list-item">
+                    <a href="#" class="catalog-content__clients-card">
+                        <div class="catalog-content__clients-card-image-container">
+                            <img src="/images/clients/10.webp" alt="" class="catalog-content__clients-card-image"
+                                loading="lazy">
+                        </div>
+                    </a>
+                </li>
+                <li class="catalog-content__clients-list-item">
+                    <a href="#" class="catalog-content__clients-card">
+                        <div class="catalog-content__clients-card-image-container">
+                            <img src="/images/clients/11.webp" alt="" class="catalog-content__clients-card-image"
+                                loading="lazy">
+                        </div>
+                    </a>
+                </li>
+                <li class="catalog-content__clients-list-item">
+                    <a href="#" class="catalog-content__clients-card">
+                        <div class="catalog-content__clients-card-image-container">
+                            <img src="/images/clients/12.webp" alt="" class="catalog-content__clients-card-image"
+                                loading="lazy">
+                        </div>
+                    </a>
+                </li>
+                <li class="catalog-content__clients-list-item">
+                    <a href="#" class="catalog-content__clients-card">
+                        <div class="catalog-content__clients-card-image-container">
+                            <img src="/images/clients/13.webp" alt="" class="catalog-content__clients-card-image"
+                                loading="lazy">
+                        </div>
+                    </a>
+                </li>
+                <li class="catalog-content__clients-list-item">
+                    <a href="#" class="catalog-content__clients-card">
+                        <div class="catalog-content__clients-card-image-container">
+                            <img src="/images/clients/14.webp" alt="" class="catalog-content__clients-card-image"
+                                loading="lazy">
+                        </div>
+                    </a>
+                </li>
+                <li class="catalog-content__clients-list-item">
+                    <a href="#" class="catalog-content__clients-card">
+                        <div class="catalog-content__clients-card-image-container">
+                            <img src="/images/clients/15.webp" alt="" class="catalog-content__clients-card-image"
+                                loading="lazy">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <a href="#" class="catalog-content__show-more">
+                Показать еще
+                <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#show-more"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
