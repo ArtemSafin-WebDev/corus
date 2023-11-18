@@ -1,0 +1,145 @@
+.we-solve {
+  @include blockWrapper;
+  padding-bottom: 10rem;
+  background-color: #fff;
+
+  @include breakpoint(mobile) {
+    padding-bottom: 6rem;
+  }
+}
+
+.we-solve__content {
+  @include blockContent;
+}
+
+.we-solve__heading {
+  font-size: 9.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 10.2rem;
+  letter-spacing: -0.368rem;
+  text-transform: uppercase;
+  font-family: var(--drugs);
+  margin-bottom: 4rem;
+  b {
+    font-weight: inherit;
+    color: #8293a6;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 7.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 8rem;
+    letter-spacing: -0.288rem;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 5.2rem;
+    letter-spacing: -0.192rem;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4rem;
+    letter-spacing: -0.128rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+}
+
+.we-solve__slider {
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-wrapper {
+    @include breakpointMF(laptop) {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-gap: 1.6rem;
+    }
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    box-sizing: border-box;
+
+    @include breakpoint(tablet) {
+      width: 32.4rem;
+      margin-right: 1.2rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.we-solve__card {
+  padding: 4rem 2.4rem;
+  padding-bottom: 4rem;
+  border-radius: 5rem;
+  background: #fef9f4;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 2rem;
+
+  @include breakpoint(tablet) {
+    border-radius: 3rem;
+  }
+}
+
+.we-solve__card-title {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.we-solve__card-text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+
+.we-solve__image-wrapper {
+  margin-top: 1.6rem;
+  position: relative;
+  border-radius: 5rem;
+  overflow: hidden;
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 37.2%;
+
+    @include breakpoint(mobile) {
+      padding-bottom: 42%;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    border-radius: 3rem;
+  }
+}
+
+.we-solve__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

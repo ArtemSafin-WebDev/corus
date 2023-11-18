@@ -28,6 +28,11 @@ import showAllCheckboxes from "./showAllCheckboxes";
 import accordions from "./accordions";
 import catalogFilters from "./catalogFilters";
 import quotes from "./quotesSlider";
+import strongParts from "./strongParts";
+import functionalSlider from "./functionalSlider";
+import interfaceTabsNav from "./interfaceTabsNav";
+import interfaceSlider from "./interfaceSlider";
+import weSolveSlider from "./weSolveSlider";
 
 document.addEventListener("DOMContentLoaded", () => {
   smoothScrolling();
@@ -58,6 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
   accordions();
   catalogFilters();
   quotes();
+  strongParts();
+  functionalSlider();
+  interfaceTabsNav();
+  interfaceSlider();
+  weSolveSlider();
 });
 
 window.addEventListener("load", () => {

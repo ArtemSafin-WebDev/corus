@@ -1,0 +1,309 @@
+.platform-intro {
+  @include blockWrapper;
+  padding-top: 12rem;
+  padding-bottom: 10rem;
+  background-color: #fff;
+
+  @include breakpoint(mobile) {
+    padding-top: 9rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.platform-intro__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.platform__breadcrumbs {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+  margin-bottom: 2rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 3rem;
+  }
+
+  a {
+    &::after {
+      content: " / ";
+    }
+    color: var(--primary-color);
+    &:link,
+    &:visited {
+      color: var(--primary-color);
+    }
+
+    &.active {
+      color: #9798a1;
+      cursor: default;
+      &:link,
+      &:visited {
+        color: #9798a1;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.platform__card {
+  position: relative;
+  z-index: 1;
+  border-radius: 5rem;
+  overflow: hidden;
+
+  color: white;
+
+  @include breakpoint(tablet) {
+    border-radius: 3rem;
+  }
+
+  @include breakpoint(mobile) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    border-radius: 0;
+    overflow: visible;
+    grid-template-rows: auto auto;
+    grid-row-gap: 2rem;
+  }
+}
+
+.platform__card-bg {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+    z-index: 2;
+  }
+
+  @include breakpoint(mobile) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+  }
+}
+
+.platform__card-bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.platform__card-content {
+  padding: 5rem 11.3rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 50rem;
+  justify-content: flex-end;
+
+  @include breakpointMF(small-tablet) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 0;
+    grid-row-gap: 0;
+    grid-template-areas: "nothing nothing" "logo logo" "heading heading" "text text" "button info";
+    grid-template-rows: 1fr auto auto auto auto;
+  }
+
+  @include breakpoint(mobile) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    padding: 0;
+    display: contents;
+    min-height: auto;
+  }
+}
+
+.platform__card-logo {
+  height: 6.3rem;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+  margin-bottom: 2rem;
+  filter: invert(100%) grayscale(100%) brightness(500%) contrast(500%);
+  grid-area: logo;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 3rem;
+  }
+}
+
+.platform__card-heading {
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 5.2rem;
+  letter-spacing: -0.192rem;
+  text-transform: uppercase;
+  font-family: var(--drugs);
+  margin-bottom: 2rem;
+  grid-area: heading;
+
+  @include breakpoint(mobile) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4rem;
+    letter-spacing: -0.128rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+}
+
+.platform__card-text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8rem;
+  margin-bottom: 3rem;
+  max-width: 66.4rem;
+  grid-area: text;
+
+  @include breakpoint(mobile) {
+    max-width: none;
+    margin-bottom: 2rem;
+  }
+}
+
+.platform__card-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: white;
+  flex-wrap: wrap;
+  row-gap: 0;
+  grid-area: info;
+
+  @include breakpoint(mobile) {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    flex-wrap: nowrap;
+  }
+}
+
+.platform__card-info-item {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8rem;
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-shrink: 0;
+  &--orange {
+    color: var(--primary-color);
+  }
+  &::after {
+    content: "|";
+    flex-shrink: 0;
+    color: white;
+  }
+
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    color: #8293a6;
+    &::after {
+      color: #8293a6;
+    }
+
+    &--orange {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.platform__card-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.4rem;
+  letter-spacing: -0.064rem;
+  color: white;
+  padding: 0.4rem;
+  border-radius: 10rem;
+  padding-left: 2rem;
+  background-color: var(--primary-color);
+  transition: background-color 0.2s, color 0.2s;
+  grid-area: button;
+  justify-self: flex-start;
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: white;
+      color: var(--primary-color);
+
+      .platform__card-link-icon {
+        background-color: var(--primary-color);
+        svg {
+          fill: white;
+        }
+      }
+    }
+  }
+}
+
+.platform__card-link-icon {
+  flex-shrink: 0;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  background-color: white;
+  transition: background-color 0.2s;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--primary-color);
+    transition: fill 0.2s;
+  }
+}
+
+.platform__card-inner-wrapper {
+  @include breakpointMF(small-tablet) {
+    display: contents;
+  }
+
+  @include breakpoint(mobile) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    z-index: 4;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+  }
+}
