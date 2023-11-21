@@ -1,0 +1,312 @@
+.client-modal {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-y: contain;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+  opacity: 0;
+  visibility: hidden;
+  &.active {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+
+  body:not(.loaded) & {
+    display: none;
+  }
+
+  @media (hover: hover) {
+    @include customScrollbar;
+  }
+
+  @include breakpoint(mobile) {
+    @include blockWrapper;
+    background: #f6f7fa;
+  }
+}
+
+.client-modal__inner {
+  margin-right: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 5rem 5rem 0px;
+  background: #f6f7fa;
+  // overflow: hidden;
+  flex-shrink: 0;
+  width: 100rem;
+  max-width: 100%;
+  color: var(--text-color);
+  padding: 4.8rem;
+  padding-right: 4.8rem;
+  padding-top: 8rem;
+  padding-bottom: 5.5rem;
+  position: relative;
+  transition: transform 0.4s;
+  transform: translateX(-100%);
+
+  .client-modal.active & {
+    transform: translateX(0%);
+  }
+
+  @include breakpoint(tablet) {
+    border-radius: 0;
+    max-width: none;
+    width: auto;
+    transform: translateX(0);
+  }
+
+  @include breakpoint(mobile) {
+    @include blockContent;
+    overflow: visible;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 3rem 0;
+    transform: translateX(0);
+    padding-top: 8rem;
+  }
+}
+
+.client-modal__close {
+  position: absolute;
+  top: 3.8rem;
+  right: 4.8rem;
+  z-index: 40;
+  width: 2rem;
+  height: 2rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--text-color);
+    transition: fill 0.2s;
+
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      svg {
+        fill: var(--primary-color);
+      }
+    }
+  }
+
+  @include breakpoint(mobile) {
+    right: 0;
+    top: 2rem;
+    width: 2rem;
+    height: 2rem;
+    width: 4rem;
+    height: 4rem;
+
+    svg {
+      &:nth-child(1) {
+        display: none;
+      }
+
+      &:nth-child(2) {
+        display: block;
+      }
+    }
+  }
+}
+
+.client-modal__card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "stack";
+  border-radius: 4rem;
+  overflow: hidden;
+  color: white;
+  margin-bottom: 1.6rem;
+  &:link,
+  &:visited {
+    color: white;
+  }
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 44%;
+    grid-area: stack;
+  }
+
+  @include breakpoint(tablet) {
+    border-radius: 3rem;
+  }
+
+  @include breakpoint(mobile) {
+    margin-bottom: 1.2rem;
+    overflow: visible;
+    border-radius: 0;
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.client-modal__card-bg {
+  position: relative;
+  grid-area: stack;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  }
+
+  @include breakpoint(mobile) {
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    min-height: 50rem;
+  }
+}
+
+.client-modal__card-bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.client-modal__card-content {
+  grid-area: stack;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 3.7rem;
+  padding: 5rem 3.5rem;
+  z-index: 5;
+
+  @include breakpoint(mobile) {
+    padding: 4rem 0;
+  }
+}
+
+.client-modal__card-logo {
+  width: auto;
+  height: 2.5rem;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.client-modal__card-text {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+  max-width: 67rem;
+}
+
+.client-modal__features-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 1.6rem;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 1.2rem;
+  }
+}
+
+.client-modal__features-list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.client-modal__features-card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 4rem 2.4rem;
+  border-radius: 5rem;
+  gap: 3rem;
+  background-color: #f5f1ef;
+
+  @include breakpoint(tablet) {
+    border-radius: 3rem;
+  }
+
+  @include breakpoint(mobile) {
+  }
+}
+
+.client-modal__features-card-title {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 2.4rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.client-modal__features-card-text {
+  color: #424a53;
+
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+
+.client-modal__projects {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 8.8rem;
+  @include breakpoint(mobile) {
+    gap: 2rem;
+    margin-top: 5rem;
+  }
+}
+
+.client-modal__projects-heading {
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 5.2rem;
+  letter-spacing: -0.192rem;
+  text-transform: uppercase;
+  font-family: var(--drugs);
+
+  @include breakpoint(mobile) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4rem;
+    letter-spacing: -0.128rem;
+    text-transform: uppercase;
+  }
+}
+
+.client-modal__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 1.6rem;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 1.2rem;
+  }
+}

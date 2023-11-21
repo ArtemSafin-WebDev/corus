@@ -24,6 +24,10 @@
     display: none;
   }
 
+  @media (hover: hover) {
+    @include customScrollbar;
+  }
+
   @include breakpoint(mobile) {
     @include blockWrapper;
     background: #f6f7fa;
