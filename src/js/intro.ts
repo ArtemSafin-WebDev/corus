@@ -62,13 +62,13 @@ export default function intro() {
     const textSlider = new Swiper(textSliderContainer, {
       modules: [Autoplay, Controller, EffectFade],
       slidesPerView: 1,
-      speed: 500,
+      speed: 10,
       effect: "fade",
       fadeEffect: {
         crossFade: true,
       },
       autoplay: {
-        delay: 2000,
+        delay: 2900,
         disableOnInteraction: true,
       },
       init: false,

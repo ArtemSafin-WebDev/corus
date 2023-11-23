@@ -1,50 +1,53 @@
 export default function modals() {
-  const openBtns = Array.from(
-    document.querySelectorAll<HTMLAnchorElement>(".js-modal-open")
-  );
+  const OPEN_BTN_SELECTOR = ".js-modal-open";
+  const CLOSE_BTN_SELECTOR = ".js-modal-close";
 
-  const closeBtns = Array.from(
-    document.querySelectorAll<HTMLButtonElement>(".js-modal-close")
-  );
-
-  openBtns.forEach((btn) =>
-    btn.addEventListener("click", (event) => {
+  document.addEventListener("click", (event) => {
+    const target = event.target as HTMLElement;
+    if (
+      target.matches(OPEN_BTN_SELECTOR) ||
+      target.closest(OPEN_BTN_SELECTOR)
+    ) {
       event.preventDefault();
+      const btn = target.matches(OPEN_BTN_SELECTOR)
+        ? (target as HTMLAnchorElement)
+        : target.closest<HTMLAnchorElement>(OPEN_BTN_SELECTOR);
+      if (!btn) return;
       const hash = btn.hash;
       const modal = document.querySelector<HTMLElement>(`.js-modal${hash}`);
       if (modal) document.body.classList.remove("menu-open");
       modal?.classList.add("active");
       document.body.classList.add("modal-open");
-    })
-  );
-
-  closeBtns.forEach((btn) =>
-    btn.addEventListener("click", (event) => {
+    }
+  });
+  document.addEventListener("click", (event) => {
+    const target = event.target as HTMLElement;
+    if (
+      target.matches(CLOSE_BTN_SELECTOR) ||
+      target.closest(CLOSE_BTN_SELECTOR)
+    ) {
       event.preventDefault();
       const modals = Array.from(
         document.querySelectorAll<HTMLElement>(".js-modal")
       );
       modals.forEach((modal) => modal.classList.remove("active"));
       document.body.classList.remove("modal-open");
-    })
-  );
+    }
+  });
 
-  const modals = Array.from(
-    document.querySelectorAll<HTMLElement>(".js-modal")
-  );
-
-  modals.forEach((modal) =>
-    modal.addEventListener("click", (event) => {
-      const target = event.target as HTMLElement;
-      if (target === modal) {
-        modal.classList.remove("active");
-        document.body.classList.remove("modal-open");
-      }
-    })
-  );
+  document.addEventListener("click", (event) => {
+    const target = event.target as HTMLElement;
+    if (target.matches(".js-modal")) {
+      target.classList.remove("active");
+      document.body.classList.remove("modal-open");
+    }
+  });
 
   window.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
+      const modals = Array.from(
+        document.querySelectorAll<HTMLElement>(".js-modal")
+      );
       modals.forEach((modal) => modal.classList.remove("active"));
       document.body.classList.remove("modal-open");
     }

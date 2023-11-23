@@ -33,6 +33,7 @@ import functionalSlider from "./functionalSlider";
 import interfaceTabsNav from "./interfaceTabsNav";
 import interfaceSlider from "./interfaceSlider";
 import weSolveSlider from "./weSolveSlider";
+import counters from "./counters";
 
 document.addEventListener("DOMContentLoaded", () => {
   smoothScrolling();
@@ -68,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
   interfaceTabsNav();
   interfaceSlider();
   weSolveSlider();
+  counters();
 });
 
 window.addEventListener("load", () => {

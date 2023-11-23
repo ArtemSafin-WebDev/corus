@@ -608,6 +608,15 @@
   letter-spacing: -0.04rem;
   text-transform: uppercase;
 
+  @include breakpoint(desktop) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.4rem;
+    letter-spacing: -0.032rem;
+    text-transform: uppercase;
+  }
+
   @include breakpoint(tablet) {
     font-size: 1.6rem;
     font-style: normal;

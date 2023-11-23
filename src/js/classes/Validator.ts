@@ -3,6 +3,7 @@ import isNumeric from "validator/es/lib/isNumeric";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Inputmask from "inputmask";
+import isAlpha from "validator/es/lib/isAlpha";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,6 +17,7 @@ type Locale = {
   emailField: string;
   alphanumericField: string;
   phoneField: string;
+  alphaField: string;
 };
 
 type Localization = {
@@ -29,12 +31,14 @@ const defaultLocalization: Localization = {
     emailField: "Введите корректный E-mail",
     alphanumericField: "Разрешены только цифры и буквы",
     phoneField: "Введите правильный номер телефона",
+    alphaField: "Допустимы только буквы",
   },
   en: {
     requiredField: "Field is required",
     emailField: "Enter correct E-mail",
     alphanumericField: "Only digits and numbers allowed",
     phoneField: "Enter correct phone number",
+    alphaField: "Only letters allowed",
   },
 };
 
@@ -50,6 +54,7 @@ class Validator {
 
   private readonly phoneRegex =
     /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+
   private localization: Localization;
   private locale: keyof Localization;
 
@@ -183,6 +188,16 @@ class Validator {
         this.errors.push({
           element: field,
           message: this.localization[this.locale].phoneField,
+        });
+      }
+    }
+
+    if (value && field.matches('[data-alpha=""]') && value) {
+      const cleanedValue = value.replace(/\s/g, "");
+      if (!(isAlpha(cleanedValue, "ru-RU") || isAlpha(cleanedValue, "en-US"))) {
+        this.errors.push({
+          element: field,
+          message: this.localization[this.locale].alphaField,
         });
       }
     }

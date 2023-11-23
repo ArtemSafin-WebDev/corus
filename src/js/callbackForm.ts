@@ -8,5 +8,11 @@ export default function callbackForm() {
   forms.forEach((form) => {
     const formValidator = new Validator(form);
     form.validator = formValidator;
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      formValidator.validate();
+    });
   });
 }
