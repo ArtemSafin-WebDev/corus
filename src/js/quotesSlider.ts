@@ -2,6 +2,7 @@ import Swiper from "swiper";
 import "swiper/css";
 import { EffectFade, Controller, Navigation, Pagination } from "swiper/modules";
 import "swiper/css/effect-fade";
+import "swiper/css/navigation";
 
 export default function quotes() {
   const elements = Array.from(
