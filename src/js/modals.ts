@@ -16,6 +16,10 @@ export default function modals() {
       const hash = btn.hash;
       const modal = document.querySelector<HTMLElement>(`.js-modal${hash}`);
       if (modal) document.body.classList.remove("menu-open");
+      const otherModals = Array.from(
+        document.querySelectorAll<HTMLElement>(".js-modal")
+      );
+      otherModals.forEach((modal) => modal.classList.remove("active"));
       modal?.classList.add("active");
       document.body.classList.add("modal-open");
     }

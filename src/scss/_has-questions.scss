@@ -112,6 +112,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  .page-dark & {
+    filter: grayscale(100%);
+  }
 }
 
 .has-questions__link {

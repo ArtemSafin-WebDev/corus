@@ -1,0 +1,129 @@
+.team-features {
+  @include blockWrapper;
+  background: #323941;
+  padding-bottom: 13rem;
+
+  @include breakpoint(mobile) {
+    padding-bottom: 8rem;
+  }
+}
+
+.team-features__content {
+  @include blockContent;
+}
+
+.team-features__slider {
+  margin-bottom: 6.8rem;
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    box-sizing: border-box;
+
+    @include breakpoint(tablet) {
+      width: 32.4rem;
+      margin-right: 1.2rem;
+    }
+  }
+
+  @include breakpointMF(laptop) {
+    .swiper-wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-gap: 1.6rem;
+      align-items: flex-start;
+    }
+
+    .swiper-slide {
+      &:nth-child(4n + 1) {
+        margin-top: 7.4rem;
+      }
+      &:nth-child(4n + 2) {
+        margin-top: 21rem;
+      }
+      &:nth-child(4n + 3) {
+        margin-top: 13rem;
+      }
+      &:nth-child(4n + 4) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.team-features__card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-radius: 5rem;
+  padding: 4rem 2.4rem;
+  gap: 2rem;
+  background-color: #474d54;
+  color: white;
+
+  @include breakpoint(tablet) {
+    border-radius: 3rem;
+    gap: 2rem;
+  }
+}
+
+.team-features__card-amount {
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -0.192rem;
+  text-transform: uppercase;
+  font-family: var(--drugs);
+
+  @include breakpoint(mobile) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4rem;
+    letter-spacing: -0.128rem;
+    text-transform: uppercase;
+  }
+}
+
+.team-features__card-text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
+    letter-spacing: -0.056rem;
+  }
+}
+
+.team-features__large-text {
+  max-width: 126rem;
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -0.192rem;
+  font-family: var(--drugs);
+
+  @include breakpoint(mobile) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4rem;
+    letter-spacing: -0.128rem;
+  }
+
+  b {
+    font-weight: inherit;
+    color: var(--primary-color);
+  }
+}

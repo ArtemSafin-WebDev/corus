@@ -1,0 +1,119 @@
+.team-basis {
+  @include blockWrapper;
+  border-radius: 5rem 5rem 0px 0px;
+  background: #272d34;
+  padding-top: 10rem;
+  position: relative;
+  z-index: 1;
+  margin-top: -5rem;
+  padding-bottom: 10rem;
+
+  @include breakpoint(tablet) {
+    border-radius: 3rem 3rem 0px 0px;
+    margin-top: -3rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 8rem;
+    padding-top: 6rem;
+  }
+}
+
+.team-basis__content {
+  @include blockContent;
+}
+
+.team-basis__heading {
+  font-size: 7.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 8rem;
+  letter-spacing: -0.288rem;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+  font-family: var(--drugs);
+
+  @include breakpoint(tablet) {
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 5.2rem;
+    letter-spacing: -0.192rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4rem;
+    letter-spacing: -0.128rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+}
+
+.team-basis__slider {
+  .swiper {
+    overflow: visible;
+  }
+  .swiper-slide {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: calc(33.33% - (2.4rem * 2 / 3));
+    margin-right: 2.4rem;
+    height: auto;
+    @include breakpoint(desktop) {
+      width: calc(33.33% - (1.6rem * 2 / 3));
+      margin-right: 1.6rem;
+    }
+
+    @include breakpoint(tablet) {
+      width: 35rem;
+    }
+
+    @include breakpoint(tablet) {
+      width: 32.4rem;
+      margin-right: 1.2rem;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.team-basis__slider-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5rem;
+  background: #464c54;
+  color: white;
+  padding: 4rem 2.4rem;
+  gap: 3rem;
+  padding-right: 4rem;
+  flex-grow: 1;
+  @include breakpoint(tablet) {
+    border-radius: 3rem;
+    gap: 2rem;
+  }
+}
+
+.team-basis__slider-card-title {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 2.4rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.team-basis__slider-card-text {
+  color: #fcfdfd;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+}

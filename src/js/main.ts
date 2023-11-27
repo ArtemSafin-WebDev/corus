@@ -34,6 +34,9 @@ import interfaceTabsNav from "./interfaceTabsNav";
 import interfaceSlider from "./interfaceSlider";
 import weSolveSlider from "./weSolveSlider";
 import counters from "./counters";
+import teamIntro from "./teamIntro";
+import teamMembers from "./teamMembers";
+import teamBasisSlider from "./teamBasisSlider";
 
 document.addEventListener("DOMContentLoaded", () => {
   smoothScrolling();
@@ -70,6 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
   interfaceSlider();
   weSolveSlider();
   counters();
+  teamIntro();
+  teamMembers();
+  teamBasisSlider();
 });
 
 window.addEventListener("load", () => {
