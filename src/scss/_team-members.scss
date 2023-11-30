@@ -118,7 +118,8 @@
   grid-template-columns: minmax(0, 1fr);
   grid-template-areas: "stack";
   color: white;
-
+  backface-visibility: hidden;
+  transform: translateZ(0);
   &:link,
   &:visited {
     color: white;
@@ -185,6 +186,10 @@
   transition: filter 0.2s;
   backface-visibility: hidden;
   will-change: filter;
+
+  &--with-color {
+    filter: grayscale(0%);
+  }
 }
 
 .team-members__slider-card-content {
