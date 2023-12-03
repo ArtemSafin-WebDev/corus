@@ -380,7 +380,7 @@
   border: 1px solid #e3e8ef;
   background: white;
   overflow: hidden;
-
+  margin-top: auto;
   @include breakpoint(tablet) {
     border-radius: 3rem;
   }

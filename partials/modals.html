@@ -15,6 +15,40 @@
             </div>
             <form action="/" method="POST" class="callback-modal__form js-callback-form">
                 <div class="callback-modal__fields">
+                    <div class="callback-modal__field callback-modal__field--fullwidth">
+                        <div class="callback-modal__select js-select" data-required-select="">
+                            <button class="callback-modal__select-btn" type="button">
+                                <span class="callback-modal__select-btn-text">
+                                    Выберите эксперта
+                                </span>
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#select-arrow"></use>
+                                </svg>
+                            </button>
+                            <div class="callback-modal__dropdown">
+                                <div class="callback-modal__dropdown-inner">
+                                    <label class="callback-modal__radio">
+                                        <input type="radio" name="expert" value="1" class="callback-modal__radio-input">
+                                        <span class="callback-modal__radio-text">
+                                            Эксперт 1
+                                        </span>
+                                    </label>
+                                    <label class="callback-modal__radio">
+                                        <input type="radio" name="expert" value="2" class="callback-modal__radio-input">
+                                        <span class="callback-modal__radio-text">
+                                            Эксперт 2
+                                        </span>
+                                    </label>
+                                    <label class="callback-modal__radio">
+                                        <input type="radio" name="expert" value="3" class="callback-modal__radio-input">
+                                        <span class="callback-modal__radio-text">
+                                            Эксперт 3
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="callback-modal__field">
                         <div class="callback-modal__input-wrapper">
                             <input type="text" class="callback-modal__input" name="your-name" required=""

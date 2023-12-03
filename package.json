@@ -30,7 +30,7 @@
     "inputmask": "^5.0.8",
     "lodash": "^4.17.21",
     "splitting": "^1.0.6",
-    "swiper": "^10.3.1",
+    "swiper": "^11.0.5",
     "validator": "^13.11.0"
   }
 }

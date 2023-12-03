@@ -169,6 +169,10 @@
   }
 }
 
+.callback-modal__field--fullwidth {
+  grid-column: 1 / -1;
+}
+
 .callback-modal__input {
   display: block;
   width: 100%;
@@ -402,4 +406,105 @@
   font-weight: 400;
   line-height: 2.4rem;
   color: black;
+}
+
+.callback-modal__select {
+  position: relative;
+}
+
+.callback-modal__select-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+  height: 4.8rem;
+  padding: 0 2rem;
+  border-radius: 1rem;
+  border: 1px solid #e3e8ef;
+  background: white;
+  color: var(--text-color);
+  transition: border-color 0.2s;
+
+  svg {
+    flex-shrink: 0;
+    width: 1.8rem;
+    height: 1.8rem;
+    transition: transform 0.4s;
+    fill: #878787;
+  }
+
+  .js-select.active & {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.js-select:has(.validation-error) .callback-modal__select-btn {
+  border-color: var(--primary-color);
+}
+
+.callback-modal__select-btn-text {
+  width: 30%;
+  flex-grow: 1;
+}
+
+.callback-modal__dropdown {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 100%;
+  padding-top: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+  width: 100%;
+  .js-select.active & {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+}
+
+.callback-modal__dropdown-inner {
+  border-radius: 1rem;
+  border: 1px solid #e3e8ef;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.callback-modal__radio {
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.callback-modal__radio-input {
+  display: none;
+}
+
+.callback-modal__radio-text {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+  display: block;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e3e8ef;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+
+  .callback-modal__radio:last-child & {
+    border: none;
+  }
+}
+
+.callback-modal__radio-input:checked ~ .callback-modal__radio-text {
+  background-color: var(--primary-color);
+  color: white;
 }

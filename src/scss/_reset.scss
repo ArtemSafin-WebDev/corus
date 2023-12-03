@@ -248,16 +248,10 @@ select:-webkit-autofill:focus {
   display: none !important;
 }
 
-.scrollbar {
-  margin-top: 1rem;
-  height: 0.8rem;
+.swiper-slide {
+  touch-action: none !important;
+}
 
-  background-color: white;
-  border-radius: 2rem;
-  overflow: hidden;
-  .swiper-scrollbar-drag {
-    background-color: #e3e8ef;
-    background-color: var(--primary-color);
-    border-radius: 2rem;
-  }
+.swiper-slide > * {
+  touch-action: pan-y !important;
 }
