@@ -23,7 +23,7 @@ export default function teamFeatures() {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: slider,
-            start: "top bottom",
+            start: "center bottom",
             end: "bottom top",
             markers: false,
             pinnedContainer: ".team-wrapper",
