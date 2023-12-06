@@ -34,7 +34,6 @@ import interfaceTabsNav from "./interfaceTabsNav";
 import interfaceSlider from "./interfaceSlider";
 import weSolveSlider from "./weSolveSlider";
 import counters from "./counters";
-import teamIntro from "./teamIntro";
 import teamMembers from "./teamMembers";
 import teamBasisSlider from "./teamBasisSlider";
 import teamFeatures from "./teamFeatures";
@@ -76,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
   interfaceSlider();
   weSolveSlider();
   counters();
-  teamIntro();
   teamMembers();
   teamBasisSlider();
   teamFeatures();
