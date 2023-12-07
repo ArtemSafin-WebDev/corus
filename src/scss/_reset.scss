@@ -242,16 +242,3 @@ select:-webkit-autofill:focus {
 .lenis.lenis-stopped {
   overflow: hidden;
 }
-
-.swiper-button-lock,
-.swiper-pagination-lock {
-  display: none !important;
-}
-
-.swiper-slide {
-  touch-action: none !important;
-}
-
-.swiper-slide > * {
-  touch-action: pan-y !important;
-}

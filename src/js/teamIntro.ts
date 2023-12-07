@@ -16,30 +16,35 @@ export default function teamIntro() {
     const imageBlock = element.querySelector<HTMLElement>(
       ".team-intro__image-block"
     );
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: imageBlock,
-        start: "center center",
-        pin: document.querySelector(".team-wrapper"),
-        end: () => `center+=${window.innerHeight * 2} center`,
-        scrub: true,
-        pinSpacing: true,
-      },
-    });
 
-    tl.fromTo(
-      imageWrapper,
-      {
-        width: "70%",
-      },
-      {
-        width: "100vw",
-        duration: 1,
-        ease: "none",
-      }
-    ).to(image, {
-      filter: "grayscale(0%)",
-      duration: 0.2,
+    let mm = gsap.matchMedia();
+
+    mm.add("(min-width: 641px)", () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: imageBlock,
+          start: "center center",
+          pin: document.querySelector(".team-wrapper"),
+          end: () => `center+=${window.innerHeight * 2} center`,
+          scrub: true,
+          pinSpacing: true,
+        },
+      });
+
+      tl.fromTo(
+        imageWrapper,
+        {
+          width: "70%",
+        },
+        {
+          width: "100vw",
+          duration: 1,
+          ease: "none",
+        }
+      ).to(image, {
+        filter: "grayscale(0%)",
+        duration: 0.2,
+      });
     });
   });
 }
