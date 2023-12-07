@@ -38,6 +38,7 @@ import teamMembers from "./teamMembers";
 import teamBasisSlider from "./teamBasisSlider";
 import teamFeatures from "./teamFeatures";
 import selects from "./selects";
+import teamIntro from "./teamIntro";
 
 document.addEventListener("DOMContentLoaded", () => {
   smoothScrolling();
@@ -78,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
   teamMembers();
   teamBasisSlider();
   teamFeatures();
+  teamIntro();
 });
 
 window.addEventListener("load", () => {
