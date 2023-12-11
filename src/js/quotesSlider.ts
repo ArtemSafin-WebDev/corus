@@ -1,6 +1,12 @@
 import Swiper from "swiper";
 import "swiper/css";
-import { EffectFade, Controller, Navigation, Pagination } from "swiper/modules";
+import {
+  EffectFade,
+  Controller,
+  Navigation,
+  Pagination,
+  Mousewheel,
+} from "swiper/modules";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 
@@ -20,11 +26,14 @@ export default function quotes() {
     if (!mainContainer || !authorsContainer) return;
 
     const mainInstance = new Swiper(mainContainer, {
-      modules: [Navigation, Pagination, Controller, EffectFade],
+      modules: [Navigation, Pagination, Controller, EffectFade, Mousewheel],
       speed: 600,
       effect: "fade",
       fadeEffect: {
         crossFade: true,
+      },
+      mousewheel: {
+        forceToAxis: true,
       },
       autoHeight: true,
       pagination: {

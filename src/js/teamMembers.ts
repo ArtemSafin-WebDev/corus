@@ -1,5 +1,6 @@
 import Swiper from "swiper";
 import "swiper/css";
+import { Mousewheel } from "swiper/modules";
 import { SwiperOptions } from "swiper/types";
 
 export default function teamMembers() {
@@ -14,6 +15,10 @@ export default function teamMembers() {
     const options: SwiperOptions = {
       slidesPerView: "auto",
       speed: 600,
+      modules: [Mousewheel],
+      mousewheel: {
+        forceToAxis: true,
+      },
     };
 
     new Swiper(container, options);

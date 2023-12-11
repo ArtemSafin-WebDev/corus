@@ -115,6 +115,10 @@
   -webkit-mask-size: auto 100%;
   -webkit-mask-position: left center;
 
+  @media (max-width: 1100px) {
+    transform: translateX(-20%);
+  }
+
   @include breakpoint(tablet) {
     transform: translateX(-50%);
   }

@@ -47,7 +47,7 @@
     color: #8293a6;
   }
 
-  @include breakpoint(desktop) {
+  @media (max-width: 1670px) {
     font-size: 7.2rem;
     font-style: normal;
     font-weight: 300;

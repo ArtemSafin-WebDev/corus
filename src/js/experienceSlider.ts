@@ -1,6 +1,6 @@
 import Swiper from "swiper";
 import "swiper/css";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Mousewheel } from "swiper/modules";
 
 export default function experienceSlider() {
   const elements = Array.from(
@@ -25,8 +25,11 @@ export default function experienceSlider() {
     }
 
     new Swiper(container, {
-      modules: [Autoplay],
+      modules: [Autoplay, Mousewheel],
       slidesPerView: "auto",
+      mousewheel: {
+        forceToAxis: true,
+      },
       speed: 800,
       autoplay: {
         delay: 3000,

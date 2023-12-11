@@ -40,6 +40,11 @@ import teamFeatures from "./teamFeatures";
 import selects from "./selects";
 import teamIntro from "./teamIntro";
 
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 document.addEventListener("DOMContentLoaded", () => {
   smoothScrolling();
   splitting();
@@ -84,4 +89,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("load", () => {
   document.body.classList.add("loaded");
+});
+
+let prevWidth = window.innerWidth;
+let timer: null | ReturnType<typeof setTimeout> = null;
+window.addEventListener("resize", () => {
+  if (prevWidth !== window.innerWidth) {
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 400);
+  }
+  prevWidth = window.innerWidth;
 });

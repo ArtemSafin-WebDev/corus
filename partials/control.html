@@ -1,9 +1,24 @@
-<section class="control">
+<section class="control js-control-slider">
     <div class="control__content">
-        <h2 class="control__heading">
-            Предвидеть и управлять
-        </h2>
-        <div class="control__slider js-control-slider">
+        <div class="control__row">
+            <h2 class="control__heading">
+                Предвидеть и управлять
+            </h2>
+
+            <div class="control__arrows">
+                <button class="control__arrow control__arrow--prev" type="button">
+                    <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#long-slider-arrow-left"></use>
+                    </svg>
+                </button>
+                <button class="control__arrow control__arrow--next" type="button">
+                    <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#long-slider-arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="control__slider ">
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -84,7 +99,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>

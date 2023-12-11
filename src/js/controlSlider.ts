@@ -1,6 +1,7 @@
 import Swiper from "swiper";
 
 import "swiper/css";
+import { Mousewheel, Navigation } from "swiper/modules";
 
 export default function controlSlider() {
   const elements = Array.from(
@@ -14,6 +15,18 @@ export default function controlSlider() {
     new Swiper(container, {
       slidesPerView: "auto",
       speed: 600,
+      modules: [Mousewheel, Navigation],
+      mousewheel: {
+        forceToAxis: true,
+      },
+      navigation: {
+        prevEl: element.querySelector<HTMLButtonElement>(
+          ".control__arrow--prev"
+        ),
+        nextEl: element.querySelector<HTMLButtonElement>(
+          ".control__arrow--next"
+        ),
+      },
     });
   });
 }

@@ -1,5 +1,6 @@
 import Swiper from "swiper";
 import "swiper/css";
+import { Mousewheel, Navigation } from "swiper/modules";
 
 export default function platformSlider() {
   const elements = Array.from(
@@ -13,6 +14,18 @@ export default function platformSlider() {
     new Swiper(container, {
       slidesPerView: "auto",
       speed: 600,
+      modules: [Mousewheel, Navigation],
+      mousewheel: {
+        forceToAxis: true,
+      },
+      navigation: {
+        prevEl: element.querySelector<HTMLButtonElement>(
+          ".platform__arrow--prev"
+        ),
+        nextEl: element.querySelector<HTMLButtonElement>(
+          ".platform__arrow--next"
+        ),
+      },
     });
   });
 }

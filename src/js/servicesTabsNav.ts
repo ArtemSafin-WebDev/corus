@@ -1,6 +1,6 @@
 import Swiper from "swiper";
 import "swiper/css";
-import { Navigation } from "swiper/modules";
+import { Mousewheel, Navigation } from "swiper/modules";
 
 export default function servicesTabsNav() {
   const elements = Array.from(
@@ -31,11 +31,14 @@ export default function servicesTabsNav() {
     };
 
     let instance = new Swiper(container, {
-      modules: [Navigation],
+      modules: [Navigation, Mousewheel],
       speed: 500,
       slidesPerView: "auto",
       init: false,
       slideToClickedSlide: true,
+      mousewheel: {
+        forceToAxis: true,
+      },
       navigation: {
         prevEl: element.querySelector<HTMLButtonElement>(
           ".services__tabs-nav-arrow--prev"

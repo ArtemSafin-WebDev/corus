@@ -137,8 +137,13 @@
 
   @media (hover: hover) {
     &:hover {
-      .team-members__slider-card-image {
-        filter: grayscale(0%);
+      .team-members__slider-card-image:not(
+          .team-members__slider-card-image--with-color
+        ) {
+        opacity: 1;
+      }
+      .team-members__slider-card-image--with-color {
+        opacity: 1;
       }
     }
   }
@@ -187,9 +192,13 @@
   height: 100%;
   object-fit: cover;
   filter: grayscale(100%);
-  transition: filter 0.2s;
+  transition: filter 0.2s, opacity 0.2s;
   backface-visibility: hidden;
   will-change: filter;
+
+  &--with-color {
+    opacity: 0;
+  }
 
   &--with-color {
     filter: grayscale(0%);

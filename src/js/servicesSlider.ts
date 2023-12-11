@@ -33,6 +33,7 @@ export default function servicesSlider() {
           : false,
         longSwipesRatio: 0.2,
         hashNavigation: true,
+
         fadeEffect: {
           crossFade: true,
         },

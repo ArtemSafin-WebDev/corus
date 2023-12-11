@@ -188,6 +188,15 @@
   text-transform: uppercase;
   font-family: var(--drugs);
 
+  @media (max-width: 1600px) {
+    font-size: 10rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100.5%;
+    letter-spacing: -0.4rem;
+    text-transform: uppercase;
+  }
+
   @include breakpoint(desktop) {
     font-size: 10rem;
     font-style: normal;

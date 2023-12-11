@@ -1,5 +1,6 @@
 import Swiper from "swiper";
 import "swiper/css";
+import { Mousewheel } from "swiper/modules";
 import { SwiperOptions } from "swiper/types";
 
 export default function mediaCenterSlider() {
@@ -16,6 +17,10 @@ export default function mediaCenterSlider() {
     const options: SwiperOptions = {
       slidesPerView: "auto",
       speed: 600,
+      modules: [Mousewheel],
+      mousewheel: {
+        forceToAxis: true,
+      },
     };
 
     let instance: Swiper | null = null;

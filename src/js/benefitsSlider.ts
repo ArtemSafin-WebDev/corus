@@ -1,5 +1,6 @@
 import Swiper from "swiper";
 import "swiper/css";
+import { Mousewheel, Navigation } from "swiper/modules";
 import { SwiperOptions } from "swiper/types";
 
 export default function benefitsSlider() {
@@ -14,6 +15,18 @@ export default function benefitsSlider() {
     const options: SwiperOptions = {
       slidesPerView: "auto",
       speed: 600,
+      modules: [Mousewheel, Navigation],
+      mousewheel: {
+        forceToAxis: true,
+      },
+      navigation: {
+        prevEl: element.querySelector<HTMLButtonElement>(
+          ".benefits__arrow--prev"
+        ),
+        nextEl: element.querySelector<HTMLButtonElement>(
+          ".benefits__arrow--next"
+        ),
+      },
     };
 
     new Swiper(container, options);

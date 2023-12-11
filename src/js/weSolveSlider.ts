@@ -1,6 +1,7 @@
 import Swiper from "swiper";
 import "swiper/css";
 import { SwiperOptions } from "swiper/types";
+import { Mousewheel } from "swiper/modules";
 
 export default function weSolveSlider() {
   const elements = Array.from(
@@ -16,6 +17,10 @@ export default function weSolveSlider() {
     const options: SwiperOptions = {
       slidesPerView: "auto",
       speed: 600,
+      modules: [Mousewheel],
+      mousewheel: {
+        forceToAxis: true,
+      },
     };
 
     let instance: Swiper | null = null;

@@ -1,6 +1,6 @@
 import Swiper from "swiper";
 import "swiper/css";
-import { EffectFade, Pagination, Navigation } from "swiper/modules";
+import { EffectFade, Pagination, Navigation, Mousewheel } from "swiper/modules";
 
 export default function interfaceSlider() {
   const elements = Array.from(
@@ -13,7 +13,10 @@ export default function interfaceSlider() {
     new Swiper(container, {
       slidesPerView: "auto",
       speed: 600,
-      modules: [EffectFade, Pagination, Navigation],
+      modules: [EffectFade, Pagination, Navigation, Mousewheel],
+      mousewheel: {
+        forceToAxis: true,
+      },
       pagination: {
         el: element.querySelector<HTMLElement>(
           ".interface__inner-slider-pagination"

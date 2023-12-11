@@ -1,6 +1,6 @@
 import Swiper from "swiper";
 import "swiper/css";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Mousewheel } from "swiper/modules";
 
 export default function partnersSlider() {
   const elements = Array.from(
@@ -22,7 +22,7 @@ export default function partnersSlider() {
     }
 
     new Swiper(container, {
-      modules: [Autoplay],
+      modules: [Autoplay, Mousewheel],
       slidesPerView: "auto",
       centeredSlides: true,
       loop: true,
@@ -31,6 +31,9 @@ export default function partnersSlider() {
       autoplay: {
         delay: 0,
         disableOnInteraction: false,
+      },
+      mousewheel: {
+        forceToAxis: true,
       },
     });
   });
